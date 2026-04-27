@@ -16,11 +16,10 @@ public class Main {
 
         BoardConsoleRenderer renderer = new BoardConsoleRenderer();
         renderer.render(board);
-        Game game = new Game(board);
-        game.gameLoop();
 
-        Piece piece = board.getPiece(new Coordinates(File.B, 8));
-        Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
+
+//        Piece piece = board.getPiece(new Coordinates(File.B, 8));
+//        Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
 
 //        Knight knight = new Knight(Color.WHITE, new Coordinates(File.G, 7));
 //        board.setPiece(new Coordinates(File.G, 7), knight);

@@ -3,6 +3,7 @@ package edu.iv.javacourse.board;
 import edu.iv.javacourse.Color;
 import edu.iv.javacourse.Coordinates;
 import edu.iv.javacourse.File;
+import edu.iv.javacourse.exception.IllegalMoveException;
 import edu.iv.javacourse.piece.Pawn;
 import edu.iv.javacourse.piece.Piece;
 
@@ -12,7 +13,6 @@ public class Board {
     HashMap<Coordinates, Piece> pieces = new HashMap<>();
 
     public void setPiece(Coordinates coordinates, Piece piece) {
-        piece.coordinates = coordinates;
         pieces.put(coordinates, piece);
     }
 
@@ -21,6 +21,9 @@ public class Board {
     }
 
     public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
+        if (!pieces.containsKey(coordinatesFrom)) {
+            throw new IllegalMoveException("Haven't figure on these coordinates");
+        }
         Piece piece = getPiece(coordinatesFrom);
         removePiece(coordinatesFrom);
         setPiece(coordinatesTo, piece);

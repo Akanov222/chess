@@ -7,12 +7,8 @@ import java.util.Set;
 
 public class Queen extends Piece {
 
-    public Queen(Color color, Coordinates coordinates) {
-        super(color, coordinates);
+    public Queen(Color color) {
+        super(color);
     }
 
-    @Override
-    protected Set<CoordinatesShift> getPieceMoves() {
-        return Set.of();
-    }
 }

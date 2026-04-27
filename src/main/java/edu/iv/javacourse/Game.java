@@ -11,10 +11,10 @@ public class Game {
         this.board = board;
     }
 
-    public void gameLoop() {
+/*    public void gameLoop() {
         boolean isWhiteToMove = true;
         int i = 0;
-        while (i != 10) {
+        while (i != 1) {
             // render
             // input
             // make move
@@ -23,5 +23,5 @@ public class Game {
             isWhiteToMove =! isWhiteToMove;
             i++;
         }
-    }
+    }*/
 }

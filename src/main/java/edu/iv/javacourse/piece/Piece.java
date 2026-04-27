@@ -13,8 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 abstract public class Piece {
     public final Color color;
-    public Coordinates coordinates;
-
+/*
     public Set<Coordinates> getAvailableMoveSquares(Board board) {
         Set<Coordinates> coordinatesSet = new HashSet<>();
         for (CoordinatesShift shift : getPieceMoves()) {
@@ -34,4 +33,5 @@ abstract public class Piece {
     }
 
     protected abstract Set<CoordinatesShift> getPieceMoves();
+*/
 }

@@ -3,12 +3,19 @@ package edu.iv.javacourse;
 import edu.iv.javacourse.piece.CoordinatesShift;
 import lombok.*;
 
+import java.util.Objects;
+
 //@ToString
-@EqualsAndHashCode
-@AllArgsConstructor
+//@EqualsAndHashCode
+//@AllArgsConstructor
 public class Coordinates {
     public final File file;
     public final Integer rank;
+
+    public Coordinates(File file, Integer rank) {
+        this.file = file;
+        this.rank = rank;
+    }
 
     public Coordinates shift(CoordinatesShift shift) {
         return new Coordinates(
@@ -28,4 +35,18 @@ public class Coordinates {
         }
         return true;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Coordinates that = (Coordinates) o;
+        return file == that.file && Objects.equals(rank, that.rank);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(file, rank);
+    }
+
+
 }
