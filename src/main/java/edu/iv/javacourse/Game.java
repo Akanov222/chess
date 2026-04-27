@@ -13,13 +13,15 @@ public class Game {
 
     public void gameLoop() {
         boolean isWhiteToMove = true;
-        while (true) {
+        int i = 0;
+        while (i != 10) {
             // render
             // input
             // make move
             // pass move
             renderer.render(board);
             isWhiteToMove =! isWhiteToMove;
+            i++;
         }
     }
 }

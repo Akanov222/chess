@@ -11,30 +11,20 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-/*
         BoardFactory boardFactory = new BoardFactory();
         Board board = boardFactory.setupDefaultPiecesPositions();
 
         BoardConsoleRenderer renderer = new BoardConsoleRenderer();
         renderer.render(board);
+        Game game = new Game(board);
+        game.gameLoop();
 
         Piece piece = board.getPiece(new Coordinates(File.B, 8));
         Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
+
 //        Knight knight = new Knight(Color.WHITE, new Coordinates(File.G, 7));
 //        board.setPiece(new Coordinates(File.G, 7), knight);
 //        Set<Coordinates> availableMoveSquares2 = knight.getAvailableMoveSquares(board);
-*/
-
-
-        String line = "B8";
-        char fileChar = line.charAt(0);
-        char rankChar = line.charAt(1);
-        Coordinates coordinate = new Coordinates(
-                File.valueOf(String.valueOf(fileChar).toUpperCase()),
-                Character.getNumericValue(rankChar));
-
-        System.out.println(coordinate.file.toString());
-        System.out.println(coordinate.rank);
 
         int a = 123;
     }

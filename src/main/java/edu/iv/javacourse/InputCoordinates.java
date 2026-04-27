@@ -58,5 +58,4 @@ public class InputCoordinates {
 
         return '0';
     }
-
 }
