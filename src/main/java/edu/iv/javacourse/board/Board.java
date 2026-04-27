@@ -16,12 +16,15 @@ public class Board {
         pieces.put(coordinates, piece);
     }
 
-//    public void setupDefaultPiecesPositions() {
-//        for (File file : File.values()) {
-//            setPiece(new Coordinates(file, 2), new Pawn(Color.WHITE, new Coordinates(file, 2)));
-//            setPiece(new Coordinates(file, 7), new Pawn(Color.BLACk, new Coordinates(file, 7)));
-//        }
-//    }
+    public void removePiece(Coordinates coordinates) {
+        pieces.remove(coordinates);
+    }
+
+    public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
+        Piece piece = getPiece(coordinatesFrom);
+        removePiece(coordinatesFrom);
+        setPiece(coordinatesTo, piece);
+    }
 
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !pieces.containsKey(coordinates);

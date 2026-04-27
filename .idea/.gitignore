@@ -9,6 +9,7 @@
 /dataSources/
 /dataSources.local.xml
 
+logs
 
 # Compiled class file
 *.class
