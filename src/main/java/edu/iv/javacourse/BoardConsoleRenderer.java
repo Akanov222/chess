@@ -28,11 +28,9 @@ import java.util.Map;
                 StringBuilder line = new StringBuilder();
                 for (File file : File.values()) {
                     Coordinates coordinates = new Coordinates(file, rank);
-                    if (board.isSquareEmpty(coordinates)) {
-                        line.append(getSpriteForEmptySquare(new Coordinates(file, rank)));
-                    } else {
-                        line.append(getPieceSprite(board.getPiece(coordinates), coordinates));
-                    }
+
+                    line.append(board.isSquareEmpty(coordinates)? getSpriteForEmptySquare(new Coordinates(file, rank)) :
+                            getPieceSprite(board.getPiece(coordinates), coordinates));
                 }
 
                 line.append(ANSI_RESET);
@@ -41,37 +39,31 @@ import java.util.Map;
 
         }
 
-        private String colorizeSprite(String sprite, Color pieceColor, boolean isSquareDark) {
+        private StringBuilder colorizeSprite(StringBuilder sprite, Color pieceColor, boolean isSquareDark) {
             // format = background color + font color + text
-            String result = sprite;
-
-            if (pieceColor == Color.WHITE) {
-                result = ANSI_WHITE_PIECE_COLOR + result;
-            } else {
-                result = ANSI_BLACK_PIECE_COLOR + result;
-            }
-
-            if (isSquareDark) {
-                result = ANSI_BLACK_SQUARE_BACKGROUND + result;
-            } else {
-                result = ANSI_WHITE_SQUARE_BACKGROUND + result;
-            }
+            StringBuilder result = new StringBuilder();
+            result.append(isSquareDark ? ANSI_BLACK_SQUARE_BACKGROUND : ANSI_WHITE_SQUARE_BACKGROUND);
+            result.append(pieceColor == Color.WHITE ? ANSI_WHITE_PIECE_COLOR : ANSI_BLACK_PIECE_COLOR);
+            result.append(sprite);
 
             return result;
         }
 
-        private String getSpriteForEmptySquare(Coordinates coordinates) {
-            return colorizeSprite(String.format("%3s", IDEOGRAPHIC_SPACE),
+        private StringBuilder getSpriteForEmptySquare(Coordinates coordinates) {
+            return colorizeSprite(new StringBuilder(String.format("%3s", IDEOGRAPHIC_SPACE)),
                     Color.WHITE, Board.isSquareDark(coordinates));
         }
 
-        private String getPieceSprite(Piece piece, Coordinates coordinates) {
-            return colorizeSprite(NORMAL_SPACE + selectUnicodeSpriteForPiece(piece) + NORMAL_SPACE,
+        private StringBuilder getPieceSprite(Piece piece, Coordinates coordinates) {
+            return colorizeSprite(
+                    new StringBuilder(NORMAL_SPACE)
+                            .append(selectUnicodeSpriteForPiece(piece))
+                            .append(NORMAL_SPACE),
                     piece.color, Board.isSquareDark(coordinates));
         }
 
-        private String selectUnicodeSpriteForPiece(Piece piece) {
-            return pieceSprites.get(piece.getClass());
+        private StringBuilder selectUnicodeSpriteForPiece(Piece piece) {
+            return new StringBuilder(pieceSprites.get(piece.getClass()));
         }
     }
 

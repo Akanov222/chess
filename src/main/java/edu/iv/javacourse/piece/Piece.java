@@ -9,11 +9,21 @@ import lombok.Getter;
 import java.util.HashSet;
 import java.util.Set;
 
-@Getter
-@AllArgsConstructor
+//@Getter
+//@AllArgsConstructor
 abstract public class Piece {
     public final Color color;
-/*
+
+    public Piece(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+}
+
+    /*
     public Set<Coordinates> getAvailableMoveSquares(Board board) {
         Set<Coordinates> coordinatesSet = new HashSet<>();
         for (CoordinatesShift shift : getPieceMoves()) {
@@ -34,4 +44,3 @@ abstract public class Piece {
 
     protected abstract Set<CoordinatesShift> getPieceMoves();
 */
-}

@@ -17,6 +17,9 @@ public class Main {
         BoardConsoleRenderer renderer = new BoardConsoleRenderer();
         renderer.render(board);
 
+        int a = 123;
+    }
+}
 
 //        Piece piece = board.getPiece(new Coordinates(File.B, 8));
 //        Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
@@ -25,6 +28,3 @@ public class Main {
 //        board.setPiece(new Coordinates(File.G, 7), knight);
 //        Set<Coordinates> availableMoveSquares2 = knight.getAvailableMoveSquares(board);
 
-        int a = 123;
-    }
-}
