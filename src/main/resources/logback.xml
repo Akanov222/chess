@@ -1,15 +1,32 @@
 <configuration>
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- 1. Технический лог (всё подряд) -->
+    <appender name="TRACE_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/trace.logs</file>
+        <append>false</append> <!-- true, если не хотите очищать файл при каждом запуске -->
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %msg%n</pattern>
-<!--            %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n-->
-<!--            <pattern>%date{ISO8601} [%thread]%-5level %logger{36} %msg%n</pattern>-->
+            <pattern>%date{ISO8601} [%thread]%-5level %logger{36} %msg%n</pattern>
         </encoder>
     </appender>
 
-    <root level="INFO">
-        <appender-ref ref="STDOUT"/>
-    </root>
+    <!-- 2. Лог истории игры (только INFO) -->
+    <appender name="GAME_INFO_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/game_history.logs</file>
+        <encoder>
+            <pattern>%date{ISO8601} [%thread]%-5level %logger{36} %msg%n</pattern>
+        </encoder>
+        <!-- Фильтр: пропускаем только INFO -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
 
-    <logger name="edu.iv.javacourse" level="DEBUG"/>
+    <!-- Настройка для вашего проекта -->
+    <logger name="edu.iv.javacourse" level="DEBUG">
+        <appender-ref ref="TRACE_FILE"/>
+        <appender-ref ref="GAME_INFO_FILE"/>
+    </logger>
+
+    <root level="OFF"/>
 </configuration>
