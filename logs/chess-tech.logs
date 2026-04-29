@@ -1,0 +1,74 @@
+2026-04-29 15:58:32.046 [main] [] DEBUG BoardFactory Starting default board setup
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Pawns initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Rooks initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Knights initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Bishops initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Queens initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory King initialized
+2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Board setup completed. Total pieces: 32
+2026-04-29 15:58:32.054 [main] [] DEBUG BoardConsoleRenderer Generating board rows
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc3: color=BLACk,isDark=false
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717d: color=BLACk,isDark=true
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64324: color=BLACk,isDark=false
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee44: color=BLACk,isDark=true
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb2: color=BLACk,isDark=false
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe97401: color=BLACk,isDark=true
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fec: color=BLACk,isDark=false
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bcc: color=BLACk,isDark=true
+2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc2: color=BLACk,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717c: color=BLACk,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64323: color=BLACk,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee43: color=BLACk,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb1: color=BLACk,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe97400: color=BLACk,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75feb: color=BLACk,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bcb: color=BLACk,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc1: color=WHITE,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717b: color=WHITE,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64322: color=WHITE,isDark=false
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee42: color=WHITE,isDark=true
+2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb0: color=WHITE,isDark=false
+2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973ff: color=WHITE,isDark=true
+2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fea: color=WHITE,isDark=false
+2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bca: color=WHITE,isDark=true
+2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc0: color=WHITE,isDark=true
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717a: color=WHITE,isDark=false
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64321: color=WHITE,isDark=true
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee41: color=WHITE,isDark=false
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffaf: color=WHITE,isDark=true
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fe: color=WHITE,isDark=false
+2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe9: color=WHITE,isDark=true
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc9: color=WHITE,isDark=false
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbf: color=WHITE,isDark=false
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7179: color=WHITE,isDark=true
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64320: color=WHITE,isDark=false
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee40: color=WHITE,isDark=true
+2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffae: color=WHITE,isDark=false
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fd: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe8: color=WHITE,isDark=false
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc8: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbe: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7178: color=WHITE,isDark=false
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431f: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3f: color=WHITE,isDark=false
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffad: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fc: color=WHITE,isDark=false
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe7: color=WHITE,isDark=true
+2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc7: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbd: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7177: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431e: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3e: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffac: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fb: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe6: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc6: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbc: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7176: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431d: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3d: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffab: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fa: color=WHITE,isDark=false
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe5: color=WHITE,isDark=true
+2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc5: color=WHITE,isDark=false
+2026-04-29 15:58:32.062 [main] [] DEBUG BoardConsoleRenderer Finished board rendering

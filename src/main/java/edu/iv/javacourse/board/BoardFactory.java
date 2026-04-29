@@ -51,7 +51,7 @@ public class BoardFactory {
         board.setPiece(new Coordinates(File.E, 8), new King(Color.BLACk));
         log.debug("King initialized");
 
-        log.debug("Board setup completed. Total pieces: {}", board.pieces.size());
+        log.debug("Board setup completed. Total pieces: {}", board.getPieces().size());
         return board;
     }
 }

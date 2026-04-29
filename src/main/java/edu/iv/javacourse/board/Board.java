@@ -6,8 +6,11 @@ import edu.iv.javacourse.File;
 import edu.iv.javacourse.event.GameEventListener;
 import edu.iv.javacourse.event.MoveEvent;
 import edu.iv.javacourse.exception.IllegalMoveException;
+import edu.iv.javacourse.piece.Knight;
 import edu.iv.javacourse.piece.Pawn;
 import edu.iv.javacourse.piece.Piece;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
@@ -15,9 +18,11 @@ import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
+@Getter
+@Setter
 public class Board {
-    HashMap<Coordinates, Piece> pieces = new HashMap<>();
-    private final List<GameEventListener> listeners = new ArrayList<>();
+
+    private final HashMap<Coordinates, Piece> pieces = new HashMap<>();
 
     public void setPiece(Coordinates coordinates, Piece piece) {
         pieces.put(coordinates, piece);
@@ -48,20 +53,36 @@ public class Board {
         return ((coordinates.file.ordinal() + 1 + coordinates.rank) % 2 == 0);
     }
 
-    public void addListener(GameEventListener listener) {
-        listeners.add(listener);
+    public String toFen() {
+        StringBuilder fen = new StringBuilder();
+        for (int rank = 8; rank >= 1 ; rank--) {
+            int emptySquares = 0;
+            for (File file : File.values()) {
+                Coordinates coordinates = new Coordinates(file, rank);
+                if (isSquareEmpty(coordinates)) { emptySquares++; }
+                else {
+                    if (emptySquares > 0) {
+                        fen.append(emptySquares);
+                        emptySquares = 0;
+                    }
+                    fen.append(getPieceLetter(getPiece(coordinates)));
+                }
+            }
+            if (emptySquares > 0) { fen.append(emptySquares); }
+            if (rank > 1) { fen.append("/"); }
+        }
+        return fen.toString();
     }
 
-    public void makeMove(Coordinates from, Coordinates to) {
-        Piece piece = pieces.get(from);
-
-        // TRACE пишем прямо тут
-        log.trace("Internal: calculating move for piece at {}", from);
-
-        // ... логика хода ...
-
-        // Оповещаем мир о важном событии
-        MoveEvent event = new MoveEvent(piece, from, to);
-        listeners.forEach(l -> l.onMove(event));
+    private String getPieceLetter(Piece piece) {
+        // В FEN: белые — заглавные (P, N, B...), черные — строчные (p, n, b...)
+        // Нужно специальное условие для Коня (Knight -> N), так как King тоже на K
+        char letter = piece.getClass().getSimpleName().charAt(0);
+        if (piece instanceof Knight) {
+            letter = 'N';
+        }
+        return piece.color == Color.WHITE ?
+                String.valueOf(letter).toUpperCase() :
+                String.valueOf(letter).toLowerCase();
     }
 }

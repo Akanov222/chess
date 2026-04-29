@@ -1,8 +1,5 @@
 package edu.iv.javacourse;
 
-import edu.iv.javacourse.piece.CoordinatesShift;
-import lombok.*;
-
 import java.util.Objects;
 
 //@ToString
@@ -47,6 +44,4 @@ public class Coordinates {
     public int hashCode() {
         return Objects.hash(file, rank);
     }
-
-
 }

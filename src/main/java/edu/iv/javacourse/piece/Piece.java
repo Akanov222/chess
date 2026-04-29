@@ -10,17 +10,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 //@Getter
-//@AllArgsConstructor
+@AllArgsConstructor
 abstract public class Piece {
     public final Color color;
-
-    public Piece(Color color) {
-        this.color = color;
-    }
-
-    public Color getColor() {
-        return color;
-    }
 }
 
     /*
