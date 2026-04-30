@@ -1,4 +1,4 @@
-package edu.iv.javacourse;
+package edu.iv.javacourse.board;
 
 import lombok.AllArgsConstructor;
 

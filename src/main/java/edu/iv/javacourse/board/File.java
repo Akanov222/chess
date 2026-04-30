@@ -1,7 +1,6 @@
-package edu.iv.javacourse;
+package edu.iv.javacourse.board;
 
 import lombok.Getter;
-import lombok.ToString;
 
 //@ToString
 @Getter

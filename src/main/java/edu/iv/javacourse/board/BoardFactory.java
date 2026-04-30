@@ -1,48 +1,58 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-import edu.iv.javacourse.File;
 import edu.iv.javacourse.piece.*;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class BoardFactory {
 
-    public Board setupDefaultPiecesPositions(Board board) {
+    public void setupDefaultPiecesPositions(Board board) {
         log.debug("Starting default board setup");
-
-        // set pawns
-        for (File file : File.values()) {
-            board.setPiece(new Coordinates(file, 2), new Pawn(Color.WHITE));
-            board.setPiece(new Coordinates(file, 7), new Pawn(Color.BLACk));
-        }
-
-        setupPieces(board);
-        log.debug("Board setup completed");
-        return board;
+        fromFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", board);
     }
 
-    private void setupPieces(Board board) {
-        // set white pieces
-        board.setPiece(new Coordinates(File.A, 1), new Rook(Color.WHITE));
-        board.setPiece(new Coordinates(File.B, 1), new Knight(Color.WHITE));
-        board.setPiece(new Coordinates(File.C, 1), new Bishop(Color.WHITE));
-        board.setPiece(new Coordinates(File.D, 1), new Queen(Color.WHITE));
-        board.setPiece(new Coordinates(File.E, 1), new King(Color.WHITE));
-        board.setPiece(new Coordinates(File.F, 1), new Bishop(Color.WHITE));
-        board.setPiece(new Coordinates(File.G, 1), new Knight(Color.WHITE));
-        board.setPiece(new Coordinates(File.H, 1), new Rook(Color.WHITE));
+    public void fromFen(String fen, Board board) {
+        // FEN читается сверху вниз: от 8-й горизонтали до 1-й
+        String[] ranks = fen.split("/");
+        if (ranks.length != 8) {
+            throw new IllegalArgumentException("Invalid FEN: should have 8 ranks");
+        }
 
-        // set black pieces
-        board.setPiece(new Coordinates(File.A, 8), new Rook(Color.BLACk));
-        board.setPiece(new Coordinates(File.B, 8), new Knight(Color.BLACk));
-        board.setPiece(new Coordinates(File.C, 8), new Bishop(Color.BLACk));
-        board.setPiece(new Coordinates(File.D, 8), new Queen(Color.BLACk));
-        board.setPiece(new Coordinates(File.E, 8), new King(Color.BLACk));
-        board.setPiece(new Coordinates(File.F, 8), new Bishop(Color.BLACk));
-        board.setPiece(new Coordinates(File.G, 8), new Knight(Color.BLACk));
-        board.setPiece(new Coordinates(File.H, 8), new Rook(Color.BLACk));
+        for (int i = 0; i < 8; i++) {
+            int rank = 8 - i; // Индекс в массиве 0 -> 8 горизонталь
+            String rankText = ranks[i];
+            int fileIndex = 0;
+
+            for (char c : rankText.toCharArray()) {
+                if (Character.isDigit(c)) {
+                    // Если цифра — пропускаем пустые клетки
+                    fileIndex += Character.getNumericValue(c);
+                } else {
+                    // Если буква — создаем фигуру
+                    File file = File.values()[fileIndex];
+                    Coordinates coords = new Coordinates(file, rank);
+                    board.setPiece(coords, createPieceByChar(c));
+                    fileIndex++;
+                }
+            }
+        }
+        log.debug("Board setup completed");
+//        return board;
+    }
+
+    private Piece createPieceByChar(char c) {
+        Color color = Character.isUpperCase(c) ? Color.WHITE : Color.BLACK;
+        char symbol = Character.toLowerCase(c);
+
+        return switch (symbol) {
+            case 'p' -> new Pawn(color);
+            case 'n' -> new Knight(color);
+            case 'b' -> new Bishop(color);
+            case 'r' -> new Rook(color);
+            case 'q' -> new Queen(color);
+            case 'k' -> new King(color);
+            default -> throw new IllegalArgumentException("Unknown FEN piece: " + c);
+        };
     }
 }
 

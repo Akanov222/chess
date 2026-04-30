@@ -1,7 +1,7 @@
 package edu.iv.javacourse;
 
 import edu.iv.javacourse.board.Board;
-import edu.iv.javacourse.board.HashMapBoard;
+import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.board.BoardConsoleRenderer;
 import edu.iv.javacourse.event.GameEventListener;
 import edu.iv.javacourse.event.MoveEvent;

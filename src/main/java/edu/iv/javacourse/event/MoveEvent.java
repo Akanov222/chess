@@ -1,6 +1,6 @@
 package edu.iv.javacourse.event;
 
-import edu.iv.javacourse.Coordinates;
+import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.piece.Piece;
 import lombok.AllArgsConstructor;
 

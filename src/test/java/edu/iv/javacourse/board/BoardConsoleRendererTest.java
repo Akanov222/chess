@@ -17,7 +17,7 @@ class BoardConsoleRendererTest {
 
     @BeforeEach
     void setUp() {
-        board = new BoardFactory().setupDefaultPiecesPositions(board);
+        new BoardFactory().setupDefaultPiecesPositions(board);
         renderer = new BoardConsoleRenderer();
         renderedRows = renderer.renderToRows(board);
     }

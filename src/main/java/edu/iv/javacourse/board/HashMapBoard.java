@@ -1,6 +1,5 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.Coordinates;
 import edu.iv.javacourse.piece.Piece;
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,5 +29,4 @@ public class HashMapBoard extends BaseBoard {
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !pieces.containsKey(coordinates);
     }
-
 }

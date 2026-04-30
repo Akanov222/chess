@@ -1,6 +1,5 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.Coordinates;
 import edu.iv.javacourse.piece.Piece;
 
 public interface Board {

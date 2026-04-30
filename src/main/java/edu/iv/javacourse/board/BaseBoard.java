@@ -1,8 +1,5 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-import edu.iv.javacourse.File;
 import edu.iv.javacourse.exception.IllegalMoveException;
 import edu.iv.javacourse.piece.*;
 
@@ -46,8 +43,8 @@ public abstract class BaseBoard implements Board {
     }
 
     private String getPieceLetter(Piece piece) {
-        // В FEN: белые — заглавные (P, N, B...), черные — строчные (p, n, b...)
 
+        // В FEN: белые — заглавные (P, N, B...), черные — строчные (p, n, b...)
         char letter;
         if (piece instanceof Pawn) letter = 'P';
         else if (piece instanceof Rook) letter = 'R';
@@ -58,7 +55,7 @@ public abstract class BaseBoard implements Board {
         else letter = '?';
 
         return piece.color == Color.WHITE ?
-                String.valueOf(letter).toUpperCase() :
+                String.valueOf(letter) :
                 String.valueOf(letter).toLowerCase();
     }
 }

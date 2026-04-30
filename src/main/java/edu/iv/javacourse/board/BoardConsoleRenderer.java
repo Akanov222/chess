@@ -1,8 +1,5 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-import edu.iv.javacourse.File;
 import edu.iv.javacourse.piece.*;
 import lombok.extern.slf4j.Slf4j;
 

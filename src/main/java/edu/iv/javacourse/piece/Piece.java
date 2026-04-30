@@ -1,6 +1,6 @@
 package edu.iv.javacourse.piece;
 
-import edu.iv.javacourse.Color;
+import edu.iv.javacourse.board.Color;
 import lombok.AllArgsConstructor;
 
 //@Getter
