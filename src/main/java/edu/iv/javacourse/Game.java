@@ -1,6 +1,7 @@
 package edu.iv.javacourse;
 
 import edu.iv.javacourse.board.Board;
+import edu.iv.javacourse.board.HashMapBoard;
 import edu.iv.javacourse.board.BoardConsoleRenderer;
 import edu.iv.javacourse.event.GameEventListener;
 import edu.iv.javacourse.event.MoveEvent;
@@ -53,7 +54,7 @@ public class Game {
     }
 
     public void makeMove(Coordinates from, Coordinates to) {
-        Piece piece = board.getPieces().get(from);
+        Piece piece = board.getPiece(from);
 
         // TRACE пишем прямо тут
         log.trace("Internal: calculating move for piece at {}", from);

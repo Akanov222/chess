@@ -6,6 +6,4 @@ import lombok.AllArgsConstructor;
 public class CoordinatesShift {
     public final int fileShift;
     public final int rankShift;
-
 }
-

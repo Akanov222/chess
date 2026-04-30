@@ -1,74 +1,1090 @@
-2026-04-29 15:58:32.046 [main] [] DEBUG BoardFactory Starting default board setup
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Pawns initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Rooks initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Knights initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Bishops initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Queens initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory King initialized
-2026-04-29 15:58:32.050 [main] [] DEBUG BoardFactory Board setup completed. Total pieces: 32
-2026-04-29 15:58:32.054 [main] [] DEBUG BoardConsoleRenderer Generating board rows
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc3: color=BLACk,isDark=false
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717d: color=BLACk,isDark=true
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64324: color=BLACk,isDark=false
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee44: color=BLACk,isDark=true
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb2: color=BLACk,isDark=false
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe97401: color=BLACk,isDark=true
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fec: color=BLACk,isDark=false
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bcc: color=BLACk,isDark=true
-2026-04-29 15:58:32.055 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc2: color=BLACk,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717c: color=BLACk,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64323: color=BLACk,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee43: color=BLACk,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb1: color=BLACk,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe97400: color=BLACk,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75feb: color=BLACk,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bcb: color=BLACk,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc1: color=WHITE,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717b: color=WHITE,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64322: color=WHITE,isDark=false
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee42: color=WHITE,isDark=true
-2026-04-29 15:58:32.056 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffb0: color=WHITE,isDark=false
-2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973ff: color=WHITE,isDark=true
-2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fea: color=WHITE,isDark=false
-2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bca: color=WHITE,isDark=true
-2026-04-29 15:58:32.057 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbc0: color=WHITE,isDark=true
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac717a: color=WHITE,isDark=false
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64321: color=WHITE,isDark=true
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee41: color=WHITE,isDark=false
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffaf: color=WHITE,isDark=true
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fe: color=WHITE,isDark=false
-2026-04-29 15:58:32.058 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe9: color=WHITE,isDark=true
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc9: color=WHITE,isDark=false
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbf: color=WHITE,isDark=false
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7179: color=WHITE,isDark=true
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b64320: color=WHITE,isDark=false
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee40: color=WHITE,isDark=true
-2026-04-29 15:58:32.059 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffae: color=WHITE,isDark=false
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fd: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe8: color=WHITE,isDark=false
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc8: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbe: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7178: color=WHITE,isDark=false
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431f: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3f: color=WHITE,isDark=false
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffad: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fc: color=WHITE,isDark=false
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe7: color=WHITE,isDark=true
-2026-04-29 15:58:32.060 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc7: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbd: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7177: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431e: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3e: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffac: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fb: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe6: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc6: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@9477cbbc: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@70ac7176: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@f9b6431d: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@1124ee3d: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@43e6ffab: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@ffe973fa: color=WHITE,isDark=false
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@49a75fe5: color=WHITE,isDark=true
-2026-04-29 15:58:32.061 [main] [] DEBUG BoardConsoleRenderer Colorizing sprite at edu.iv.javacourse.Coordinates@57046bc5: color=WHITE,isDark=false
-2026-04-29 15:58:32.062 [main] [] DEBUG BoardConsoleRenderer Finished board rendering
+2026-04-30 13:46:22.895 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:22.986 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:22.995 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:23.000 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:23.017 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:23.018 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:46:46.449 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:46.517 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:46.531 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:46:46.544 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:19.140 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:19.142 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:19.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:19.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.144 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.145 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.145 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.145 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.149 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.149 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.149 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.149 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.149 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.150 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.153 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.153 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.154 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.159 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.288 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.289 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.290 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.291 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.292 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.293 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.294 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.329 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.330 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:19.337 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:19.338 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.339 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.340 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.340 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.341 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:19.341 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:19.342 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.342 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:19.343 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:19.344 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.344 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.346 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.346 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.346 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:19.347 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.605 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:38.608 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:38.610 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:38.610 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.615 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.616 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.617 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.618 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.619 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.620 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.621 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.622 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.623 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.623 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.623 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.791 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:38.792 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:38.792 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:38.792 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.792 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.792 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.793 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.794 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.795 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.796 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.797 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.798 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.824 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:38.825 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:38.826 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:38.826 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.826 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.826 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.826 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.827 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.828 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.829 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.829 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.830 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.831 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.832 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.833 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.838 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.839 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.840 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:47:38.841 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:47:46.015 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:46.019 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:47:50.548 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:47:50.552 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:08.191 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:08.193 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:08.194 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:08.194 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.195 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.196 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.197 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.198 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.199 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.200 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.323 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.324 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.325 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.326 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.327 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.328 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.350 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.351 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.352 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.353 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.355 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.359 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:08.360 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:08.360 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:08.360 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.360 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.361 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.361 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.361 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.361 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.361 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:08.362 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:08.362 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.362 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.363 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.364 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:08.364 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:08.365 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.366 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.367 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.368 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.368 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.368 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.368 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:08.369 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:08.371 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.371 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.371 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.372 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.372 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.372 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.372 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:08.372 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:08.373 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.373 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.373 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.373 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.374 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.374 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.375 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.376 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:08.376 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:08.389 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:08.389 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:25.982 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:25.985 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:25.985 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:25.985 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:25.986 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:25.986 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:25.986 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:25.987 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:25.988 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:25.989 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:25.990 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:25.991 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:25.991 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:25.991 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.096 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.097 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.098 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.099 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.099 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.100 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.101 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.102 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.103 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.125 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:26.126 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:26.126 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.127 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.128 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.129 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.129 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.129 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.129 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.129 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.130 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.130 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.130 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.130 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.131 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.131 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.131 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.132 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.133 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.134 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.134 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.134 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.134 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.134 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.135 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.135 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.135 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.136 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.136 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.136 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.136 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.136 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Generating board rows
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=8): color=BLACk,isDark=false
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=8): color=BLACk,isDark=true
+2026-04-30 13:48:26.141 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=7): color=BLACk,isDark=true
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=7): color=BLACk,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.142 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=6): color=WHITE,isDark=false
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=6): color=WHITE,isDark=true
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.143 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.144 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.144 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.144 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.151 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=5): color=WHITE,isDark=true
+2026-04-30 13:48:26.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=5): color=WHITE,isDark=false
+2026-04-30 13:48:26.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.152 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.153 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.154 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.154 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.154 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=4): color=WHITE,isDark=false
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=4): color=WHITE,isDark=true
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.155 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=3): color=WHITE,isDark=true
+2026-04-30 13:48:26.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=3): color=WHITE,isDark=false
+2026-04-30 13:48:26.156 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=2): color=WHITE,isDark=false
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=2): color=WHITE,isDark=true
+2026-04-30 13:48:26.157 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=A, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=B, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=C, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=D, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=E, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=F, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=G, rank=1): color=WHITE,isDark=true
+2026-04-30 13:48:26.158 [main] [] DEBUG e.i.j.b.BoardConsoleRenderer Colorizing sprite at Coordinates(file=H, rank=1): color=WHITE,isDark=false
+2026-04-30 13:48:26.171 [main] [] DEBUG e.i.j.b.BoardFactory Starting default board setup
+2026-04-30 13:48:26.172 [main] [] DEBUG e.i.j.b.BoardFactory Board setup completed.

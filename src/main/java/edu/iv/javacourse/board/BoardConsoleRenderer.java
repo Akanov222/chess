@@ -45,8 +45,8 @@ public class BoardConsoleRenderer implements BordRenderer{
                 Coordinates coordinates = new Coordinates(file, rank);
 
                 line.append(board.isSquareEmpty(coordinates)?
-                        getSpriteForEmptySquare(coordinates) :
-                        getPieceSprite(board.getPiece(coordinates), coordinates));
+                        getSpriteForEmptySquare(coordinates, board) :
+                        getPieceSprite(board.getPiece(coordinates), coordinates, board));
             }
 
             line.append(ANSI_RESET);
@@ -65,17 +65,17 @@ public class BoardConsoleRenderer implements BordRenderer{
         return result;
     }
 
-    private StringBuilder getSpriteForEmptySquare(Coordinates coordinates) {
+    private StringBuilder getSpriteForEmptySquare(Coordinates coordinates, Board board) {
         return colorizeSprite(new StringBuilder(String.format("%3s", IDEOGRAPHIC_SPACE)),
-                Color.WHITE, Board.isSquareDark(coordinates), coordinates);
+                Color.WHITE, board.isSquareDark(coordinates), coordinates);
     }
 
-    private StringBuilder getPieceSprite(Piece piece, Coordinates coordinates) {
+    private StringBuilder getPieceSprite(Piece piece, Coordinates coordinates, Board board) {
         return colorizeSprite(
                 new StringBuilder(NORMAL_SPACE)
                         .append(selectUnicodeSpriteForPiece(piece))
                         .append(NORMAL_SPACE),
-                piece.color, Board.isSquareDark(coordinates), coordinates);
+                piece.color, board.isSquareDark(coordinates), coordinates);
     }
 
     private StringBuilder selectUnicodeSpriteForPiece(Piece piece) {

@@ -11,13 +11,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class BoardConsoleRendererTest {
 
-    private Board board;
+    private Board board = new HashMapBoard();
     private BoardConsoleRenderer renderer;
     private List<String> renderedRows;
 
     @BeforeEach
     void setUp() {
-        board = new BoardFactory().setupDefaultPiecesPositions();
+        board = new BoardFactory().setupDefaultPiecesPositions(board);
         renderer = new BoardConsoleRenderer();
         renderedRows = renderer.renderToRows(board);
     }

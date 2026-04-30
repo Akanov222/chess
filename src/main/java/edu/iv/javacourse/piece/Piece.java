@@ -1,13 +1,7 @@
 package edu.iv.javacourse.piece;
 
 import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-import edu.iv.javacourse.board.Board;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-import java.util.HashSet;
-import java.util.Set;
 
 //@Getter
 @AllArgsConstructor
