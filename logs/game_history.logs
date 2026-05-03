@@ -1,0 +1,8 @@
+2026-05-04 01:01:43 [b640276f] | Game started
+2026-05-04 01:02:35 [b640276f] | Successfully moved Knight color WHITE from Coordinates(file=B, rank=1) to Coordinates(file=A, rank=3)
+2026-05-04 01:03:28 [b640276f] | Successfully moved Knight color BLACK from Coordinates(file=B, rank=8) to Coordinates(file=A, rank=6)
+2026-05-04 01:05:01 [b640276f] | Successfully moved Knight color WHITE from Coordinates(file=A, rank=3) to Coordinates(file=C, rank=4)
+2026-05-04 01:05:58 [b640276f] | Successfully moved Knight color BLACK from Coordinates(file=A, rank=6) to Coordinates(file=B, rank=4)
+2026-05-04 01:06:27 [b640276f] | Successfully moved Knight color WHITE from Coordinates(file=C, rank=4) to Coordinates(file=E, rank=5)
+2026-05-04 01:06:43 [b640276f] | Successfully moved Knight color BLACK from Coordinates(file=B, rank=4) to Coordinates(file=D, rank=3)
+2026-05-04 01:06:58 [b640276f] | Successfully moved Knight color WHITE from Coordinates(file=E, rank=5) to Coordinates(file=D, rank=3)

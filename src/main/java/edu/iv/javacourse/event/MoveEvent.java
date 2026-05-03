@@ -9,5 +9,5 @@ public class MoveEvent {
     public Piece piece;
     public Coordinates fromCoordinates;
     public Coordinates toCoordinates;
-
+    public Piece capturedPiece;
 }

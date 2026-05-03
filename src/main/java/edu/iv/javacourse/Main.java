@@ -6,13 +6,13 @@ import edu.iv.javacourse.board.BoardConsoleRenderer;
 import edu.iv.javacourse.board.BoardFactory;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         Board board = new HashMapBoard();
         new BoardFactory().setupDefaultPiecesPositions(board);
 
         BoardConsoleRenderer renderer = new BoardConsoleRenderer();
-        renderer.render(board);
-
-        int a = 123;
+        Game game = new Game(board, renderer);
+        game.gameLoop();
+//        int a = 123;
     }
 }

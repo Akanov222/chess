@@ -6,16 +6,6 @@ import edu.iv.javacourse.piece.*;
 public abstract class BaseBoard implements Board {
 
     @Override
-    public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
-        Piece piece = getPiece(coordinatesFrom);
-        if (piece == null) {
-            throw new IllegalMoveException("Haven't figure on these coordinates");
-        }
-        removePiece(coordinatesFrom);
-        setPiece(coordinatesTo, piece);
-    }
-
-    @Override
     public boolean isSquareDark(Coordinates coordinates) {
         return ((coordinates.file.ordinal() + 1 + coordinates.rank) % 2 == 0);
     }

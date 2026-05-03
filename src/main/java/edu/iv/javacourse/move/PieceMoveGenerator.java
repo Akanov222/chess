@@ -6,5 +6,5 @@ import edu.iv.javacourse.board.Coordinates;
 import java.util.Set;
 
 public interface PieceMoveGenerator {
-    Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, Board board);
+    Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, Board board) throws InstantiationException, IllegalAccessException;
 }

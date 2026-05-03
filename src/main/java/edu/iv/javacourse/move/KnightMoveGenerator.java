@@ -1,11 +1,14 @@
 package edu.iv.javacourse.move;
 
 import edu.iv.javacourse.board.Board;
+import edu.iv.javacourse.board.Color;
 import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.board.CoordinatesShift;
+import edu.iv.javacourse.piece.Knight;
 import edu.iv.javacourse.piece.Piece;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class KnightMoveGenerator implements PieceMoveGenerator{
