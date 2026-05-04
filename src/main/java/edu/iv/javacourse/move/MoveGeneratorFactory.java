@@ -5,7 +5,6 @@ import edu.iv.javacourse.piece.Piece;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class MoveGeneratorFactory {
     private final Map<Class<? extends Piece>, PieceMoveGenerator> generators = new HashMap<>();
