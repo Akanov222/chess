@@ -16,12 +16,12 @@ public class MoveService {
         Piece piece = board.getPiece(coordinatesFrom);
         if (piece == null) {
             log.info("Movement impossible: no piece at {}", coordinatesFrom);
-            new MoveResult(false, null);
+            return MoveResult.error();
         }
 
         if (piece.color != colorToMove) {
             log.info("Movement impossible: it's {}'s turn, but {} piece selected", colorToMove, piece.color);
-            new MoveResult(false, null);
+            return MoveResult.error();
         }
 
         PieceMoveGenerator generator = factory.getGenerator(piece.getClass());
@@ -36,7 +36,7 @@ public class MoveService {
         if (!availableMove.contains(coordinatesTo)) {
             log.debug("Movement impossible: {} cannot move from {} to {}",
                     piece.getClass().getSimpleName(), coordinatesFrom, coordinatesTo);
-            return new MoveResult(false, null);
+            return MoveResult.error();
         }
 
         Piece capturedPiece = board.getPiece(coordinatesTo);
@@ -47,6 +47,6 @@ public class MoveService {
         log.info("Successfully moved {} from {} to {}. Captured {}",
                 piece.getClass().getSimpleName(), coordinatesFrom, coordinatesTo,
                 capturedPiece != null ? capturedPiece.getClass().getSimpleName() : "none.");
-        return new MoveResult(true, capturedPiece);
+        return MoveResult.success(capturedPiece);
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-public class BoardConsoleRenderer implements BordRenderer{
+public class BoardConsoleRenderer{
 
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_WHITE_PIECE_COLOR = "\u001B[97m";
@@ -26,7 +26,6 @@ public class BoardConsoleRenderer implements BordRenderer{
             King.class, "♔"
     );
 
-    @Override
     public void render(Board board) {
         System.out.print("\033[H\033[2J");
         renderToRows(board).forEach(System.out::println);

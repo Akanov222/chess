@@ -11,8 +11,8 @@ public class Main {
         Board board = new HashMapBoard();
         new BoardFactory().setupDefaultPiecesPositions(board);
 
-        Game game = new Game(board, new BoardConsoleRenderer());
-        game.addListener(new GameHistoryListener());
-        game.gameLoop();
+//        Game game = new Game(board, new BoardConsoleRenderer());
+//        game.addListener(new GameHistoryListener());
+//        game.gameLoop();
     }
 }

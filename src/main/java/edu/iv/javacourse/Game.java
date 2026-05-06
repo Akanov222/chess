@@ -6,6 +6,7 @@ import edu.iv.javacourse.event.MoveEvent;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.move.MoveService;
 import edu.iv.javacourse.piece.Piece;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 
@@ -19,67 +20,36 @@ public class Game {
 
     private final String gameId;
     private final Board board;
-    private final BoardConsoleRenderer renderer;
     private final List<GameEventListener> listeners = new ArrayList<>();
     private final MoveService moveService = new MoveService();
-    private final InputCoordinates inputCoordinates = new InputCoordinates(System.in);
-    public Color colorToMove = Color.WHITE;
 
-    public Game(Board board, BoardConsoleRenderer renderer) {
+    @Getter
+    private Color colorToMove = Color.WHITE;
+
+    public Game(Board board) {
         this.board = board;
-        this.renderer = renderer;
         this.gameId = UUID.randomUUID().toString().substring(0, 8);
     }
 
-    public void gameLoop() {
+    public boolean makeMove(Coordinates from, Coordinates to) {
         MDC.put("gameId", gameId);
         try {
-            listeners.forEach(GameEventListener::onGameStarted);
-            while (true) {
-                // render
-                // input
-                // make move
-                // pass move
+            Piece piece = board.getPiece(from);
+            MoveResult result = moveService.movePiece(board, from, to, colorToMove);
 
-                renderer.render(board);
-
-                System.out.println("--- " + colorToMove + "'S TURN ---");
-
-                System.out.println("Select piece to move:");
-                Coordinates from = inputCoordinates.input();
-
-                System.out.println("Select target square:");
-                Coordinates to = inputCoordinates.input();
-
-                boolean success = makeMove(from, to);
-                if (success) {
-                    colorToMove = (colorToMove == Color.WHITE) ? Color.BLACK : Color.WHITE;
-                } else {
-                    System.out.println("Invalid move, try again.");
-                }
+            if (result.isSuccess()) {
+                MoveEvent event = new MoveEvent(piece, from, to, result.getCapturedPiece());
+                listeners.forEach(l -> l.onMove(event));
+                colorToMove = (colorToMove == Color.WHITE) ? Color.BLACK : Color.WHITE;
+                return true;
             }
+            return false;
         } finally {
-            listeners.forEach(GameEventListener::onGameFinished);
             MDC.remove("gameId");
         }
     }
 
     public void addListener(GameEventListener listener) {
         listeners.add(listener);
-    }
-
-    public boolean makeMove(Coordinates from, Coordinates to) {
-        Piece piece = board.getPiece(from);
-
-        MoveResult result = moveService.movePiece(board, from, to, colorToMove);
-
-        if (result.isSuccess()) {
-            MoveEvent event = new MoveEvent(piece, from, to, result.getCapturedPiece());
-            listeners.forEach(l -> l.onMove(event));
-            return true;
-        } else {
-            log.warn("Invalid move attempted from {} to {}", from, to);
-            return false;
-        }
     }
 }
