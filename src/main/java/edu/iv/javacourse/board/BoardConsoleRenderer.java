@@ -33,7 +33,7 @@ public class BoardConsoleRenderer implements BordRenderer{
         log.debug("Finished board rendering");
     }
 
-    List<String> renderToRows(Board board) {
+    protected List<String> renderToRows(Board board) {
         log.debug("Generating board rows");
         List<String> rows = new ArrayList<>();
         for (int rank = 8; rank >= 1; rank--) {

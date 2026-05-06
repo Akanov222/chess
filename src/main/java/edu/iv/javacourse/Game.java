@@ -23,7 +23,7 @@ public class Game {
     private final List<GameEventListener> listeners = new ArrayList<>();
     private final MoveService moveService = new MoveService();
     private final InputCoordinates inputCoordinates = new InputCoordinates(System.in);
-    private Color colorToMove = Color.WHITE;
+    public Color colorToMove = Color.WHITE;
 
     public Game(Board board, BoardConsoleRenderer renderer) {
         this.board = board;
