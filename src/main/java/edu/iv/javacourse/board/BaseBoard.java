@@ -1,9 +1,14 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.exception.IllegalMoveException;
 import edu.iv.javacourse.piece.*;
 
 public abstract class BaseBoard implements Board {
+
+    private final String turn = "w";
+    private final String castling = "KQkq";
+    private final String enPassant = "-";
+    private int halfMove = 0;
+    private int fullMove = 1;
 
     @Override
     public boolean isSquareDark(Coordinates coordinates) {
@@ -11,8 +16,10 @@ public abstract class BaseBoard implements Board {
     }
 
     @Override
-    public String toFen() {
+    public String toFen(String turn, String castling,
+                        String enPassant, int halfMove, int fullMove) {
         StringBuilder fen = new StringBuilder();
+
         for (int rank = 8; rank >= 1 ; rank--) {
             int emptySquares = 0;
             for (File file : File.values()) {
@@ -29,6 +36,13 @@ public abstract class BaseBoard implements Board {
             if (emptySquares > 0) { fen.append(emptySquares); }
             if (rank > 1) { fen.append("/"); }
         }
+
+        fen.append(" ").append(turn == "w" ? "w" : "b");
+        fen.append(" ").append(castling);
+        fen.append(" ").append(enPassant);
+        fen.append(" ").append(halfMove);
+        fen.append(" ").append(fullMove);
+
         return fen.toString();
     }
 
