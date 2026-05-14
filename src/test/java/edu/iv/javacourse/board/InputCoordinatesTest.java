@@ -17,7 +17,7 @@ public class InputCoordinatesTest {
         InputCoordinates inputCoordinates = new InputCoordinates(inputStream);
 
         Coordinates result = inputCoordinates.input();
-        assertThat(result.file).isEqualTo(File.A);
-        assertThat(result.rank).isEqualTo(1);
+        assertThat(result.getFile()).isEqualTo(File.A);
+        assertThat(result.getRank()).isEqualTo(1);
     }
 }

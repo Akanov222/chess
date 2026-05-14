@@ -23,7 +23,7 @@ public class BoardHtmlRenderer {
             for (File file : File.values()) {
                 Coordinates coordinates = new Coordinates(file, rank);
                 Piece piece = board.getPiece(coordinates);
-                row.add(new SquareView(coordinates, piece, board.isSquareDark(coordinates),
+                row.add(new SquareView(coordinates, piece, coordinates.getColor(),
                         getUnicodeSprite(piece)));
             }
             rows.add(row);

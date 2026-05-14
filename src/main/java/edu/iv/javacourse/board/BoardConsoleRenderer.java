@@ -51,11 +51,12 @@ public class BoardConsoleRenderer{
         return rows;
     }
 
-    private StringBuilder colorizeSprite(StringBuilder sprite, Color pieceColor, boolean isSquareDark, Coordinates coordinates) {
+    private StringBuilder colorizeSprite(StringBuilder sprite, Color pieceColor,
+                                         Color squareColor, Coordinates coordinates) {
         // format = background color + font color + text
-        log.debug("Colorizing sprite at {}: color={},isDark={}", coordinates, pieceColor, isSquareDark);
+        log.debug("Colorizing sprite at {}: color={},isDark={}", coordinates, pieceColor, squareColor);
         StringBuilder result = new StringBuilder();
-        result.append(isSquareDark ? ANSI_BLACK_SQUARE_BACKGROUND : ANSI_WHITE_SQUARE_BACKGROUND);
+        result.append(squareColor == Color.WHITE ? ANSI_WHITE_SQUARE_BACKGROUND : ANSI_BLACK_SQUARE_BACKGROUND);
         result.append(pieceColor == Color.WHITE ? ANSI_WHITE_PIECE_COLOR : ANSI_BLACK_PIECE_COLOR);
         result.append(sprite);
         return result;
@@ -63,7 +64,7 @@ public class BoardConsoleRenderer{
 
     private StringBuilder getSpriteForEmptySquare(Coordinates coordinates, Board board) {
         return colorizeSprite(new StringBuilder(String.format("%3s", IDEOGRAPHIC_SPACE)),
-                Color.WHITE, board.isSquareDark(coordinates), coordinates);
+                Color.WHITE, coordinates.getColor(), coordinates);
     }
 
     private StringBuilder getPieceSprite(Piece piece, Coordinates coordinates, Board board) {
@@ -71,7 +72,7 @@ public class BoardConsoleRenderer{
                 new StringBuilder(NORMAL_SPACE)
                         .append(selectUnicodeSpriteForPiece(piece))
                         .append(NORMAL_SPACE),
-                piece.color, board.isSquareDark(coordinates), coordinates);
+                piece.color, coordinates.getColor(), coordinates);
     }
 
     private StringBuilder selectUnicodeSpriteForPiece(Piece piece) {

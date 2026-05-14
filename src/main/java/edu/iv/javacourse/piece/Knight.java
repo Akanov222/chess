@@ -7,4 +7,12 @@ public class Knight extends Piece {
     public Knight(Color color) {
         super(color);
     }
+
+    @Override
+    public String getCode(Color color) {
+        String code = String.valueOf(this.getClass().getSimpleName().charAt(1));
+        return color == Color.WHITE ? code.toUpperCase() : code.toLowerCase();
+    }
 }
+
+
