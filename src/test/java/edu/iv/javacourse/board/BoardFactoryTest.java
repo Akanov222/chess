@@ -18,7 +18,7 @@ public class BoardFactoryTest {
         int halfMove = 0;
         int fullMove = 1;
         String expectedFen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-        assertThat(board.toFen("w", "KQkq", "-", 0, 1))
+        assertThat(board.toFen(turn, castling, enPassant, halfMove, fullMove))
                 .as("Check valid default setup pieces")
                 .isEqualTo(expectedFen);
     }

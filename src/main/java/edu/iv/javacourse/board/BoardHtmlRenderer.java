@@ -20,10 +20,10 @@ public class BoardHtmlRenderer {
         List<List<SquareView>> rows = new ArrayList<>();
         for (int rank = 8; rank >= 1; rank--) {
             List<SquareView> row = new ArrayList<>();
-            for (File file : File.values()) {
+            for (File file : File.CASHED_VALUES) {
                 Coordinates coordinates = new Coordinates(file, rank);
                 Piece piece = board.getPiece(coordinates);
-                row.add(new SquareView(coordinates, piece, coordinates.getColor(),
+                row.add(new SquareView(coordinates, piece, coordinates.getColorOfChessBoardSquare(),
                         getUnicodeSprite(piece)));
             }
             rows.add(row);

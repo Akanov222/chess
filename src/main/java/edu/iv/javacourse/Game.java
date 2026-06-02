@@ -12,7 +12,6 @@ import org.slf4j.MDC;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -22,6 +21,7 @@ public class Game {
     private final Board board;
     private final List<GameEventListener> listeners = new ArrayList<>();
     private final MoveService moveService = new MoveService();
+    private final BoardConsoleRenderer renderer = new BoardConsoleRenderer();
 
     @Getter
     private Color colorToMove = Color.WHITE;
@@ -51,5 +51,19 @@ public class Game {
 
     public void addListener(GameEventListener listener) {
         listeners.add(listener);
+    }
+
+    public void consoleGameLoop(BoardConsoleRenderer renderer) {
+        boolean isWhiteToMove = true;
+        int i = 0;
+        while (i != 1) {
+            // render
+            // input
+            // make move
+            // pass move
+            renderer.render(board);
+            isWhiteToMove = !isWhiteToMove;
+            i++;
+        }
     }
 }

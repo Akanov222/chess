@@ -7,10 +7,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class BaseBoardTest {
 
     @Test
-    void isSquareDark() {
-    }
-
-    @Test
     void isValidToFen() {
         Board board = new HashMapBoard();
         new BoardFactory().setupDefaultPiecesPositions(board);

@@ -15,7 +15,7 @@ public class Coordinates {
     private final File file;
     private final int rank;
 
-    public Color getColor() {
+    public Color getColorOfChessBoardSquare() {
         return (file.ordinal() + rank) % 2 == 0 ? Color.WHITE : Color.BLACK;
     }
 
