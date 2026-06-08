@@ -2,6 +2,7 @@ package edu.iv.javacourse.servlet;
 
 import edu.iv.javacourse.Game;
 import edu.iv.javacourse.board.*;
+import edu.iv.javacourse.board.fen.FenService;
 import edu.iv.javacourse.event.GameHistoryListener;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -21,6 +22,7 @@ import java.io.IOException;
 public class ChessServlet extends HttpServlet {
     private final String gameId = "";
     private Game game;
+    private FenService fenService = new FenService();
     private Board board;
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
@@ -30,7 +32,7 @@ public class ChessServlet extends HttpServlet {
         super.init(config);
 
         this.board = new HashMapBoard();
-        new BoardFactory().setupDefaultPiecesPositions(board);
+        new BoardFactory().setupDefaultPiecesPositions(fenService);
         this.renderer = new BoardHtmlRenderer();
         this.game = new Game(board);
         this.game.addListener(new GameHistoryListener());

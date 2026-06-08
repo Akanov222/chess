@@ -1,34 +1,51 @@
 package edu.iv.javacourse.board.fen;
 
-import edu.iv.javacourse.board.Board;
-import edu.iv.javacourse.board.Color;
-import edu.iv.javacourse.board.Coordinates;
-import edu.iv.javacourse.board.File;
+import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.piece.*;
-import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-@AllArgsConstructor
-public class FenService {
-    private final GameState gameState;
+import java.util.function.Supplier;
 
-    public void setupDefaultPiecesPositionsService(Board board) {
-        log.debug("Starting default board setup");
-        fromFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", board);
+@Slf4j
+public class FenService {
+    private final String DEFAULT_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+    private final Supplier<Board> boardSupplier;
+
+    public FenService() {
+        this.boardSupplier = HashMapBoard::new;
     }
 
-    public void fromFen(String fen, Board board) {
+    public FenService(Supplier<Board> boardSupplier) {
+        this.boardSupplier = boardSupplier;
+    }
+
+    public GameState createDefaultGame() {
+        return fromFen(DEFAULT_FEN);
+    }
+
+    public GameState fromFen(String fen) {
         // FEN читается сверху вниз: от 8-й горизонтали до 1-й
         String[] parts = fen.split("\\s+");
+
+        if (parts.length != 6) {
+            throw new IllegalArgumentException("Invalid FEN format. Expected 6 parts");
+        }
+
         String position = parts[0];
+
+        Board board = boardSupplier.get();
+        fenParser(position, board);
+
+        GameState gameState = new GameState();
+        gameState.setBoard(board);
         gameState.setTurn(parts[1]);
         gameState.setCastling(parts[2]);
         gameState.setEnPassant(parts[3]);
         gameState.setHalfMove(Integer.valueOf(parts[4]));
         gameState.setFullMove(Integer.valueOf(parts[5]));
 
-        fenParser(position, board);
+        return gameState;
     }
     private void fenParser(String position, Board board) {
         String[] ranks = position.split("/");
@@ -72,8 +89,7 @@ public class FenService {
         };
     }
 
-
-    public String toFenService() {
+    public String toFenService(Board board, GameState gameState) {
 
         StringBuilder fen = new StringBuilder();
 
@@ -81,14 +97,14 @@ public class FenService {
             int emptySquares = 0;
             for (File file : File.values()) {
                 Coordinates coordinates = new Coordinates(file, rank);
-                if (isSquareEmpty(coordinates)) {
+                if (board.isSquareEmpty(coordinates)) {
                     emptySquares++;
                 } else {
                     if (emptySquares > 0) {
                         fen.append(emptySquares);
                         emptySquares = 0;
                     }
-                    Piece piece = getPiece(coordinates);
+                    Piece piece = board.getPiece(coordinates);
                     fen.append(piece.getCode(piece.color));
                 }
             }
