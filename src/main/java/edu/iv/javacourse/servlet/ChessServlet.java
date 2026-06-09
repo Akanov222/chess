@@ -3,6 +3,7 @@ package edu.iv.javacourse.servlet;
 import edu.iv.javacourse.Game;
 import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
+import edu.iv.javacourse.board.fen.GameState;
 import edu.iv.javacourse.event.GameHistoryListener;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -17,25 +18,27 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 import org.thymeleaf.templateresolver.WebApplicationTemplateResolver;
 
 import java.io.IOException;
+import java.util.function.Supplier;
 
 @WebServlet(urlPatterns = "/game")
 public class ChessServlet extends HttpServlet {
     private final String gameId = "";
-    private Game game;
-    private FenService fenService = new FenService();
+//    private Game game;
+    private GameState gameState;
     private Board board;
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        super.init(config);
 
+        super.init(config);
         this.board = new HashMapBoard();
-        new BoardFactory().setupDefaultPiecesPositions(fenService);
+        FenService fenService = new FenService((Supplier<Board>) board);
+        gameState = fenService.createDefaultGame();
         this.renderer = new BoardHtmlRenderer();
-        this.game = new Game(board);
-        this.game.addListener(new GameHistoryListener());
+//        this.game = new Game(board);
+//        this.game.addListener(new GameHistoryListener());
 
         var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
         var resolver = new WebApplicationTemplateResolver(jakartaApplication);

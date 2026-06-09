@@ -21,7 +21,7 @@ public class Game {
     private final Board board;
     private final List<GameEventListener> listeners = new ArrayList<>();
     private final MoveService moveService = new MoveService();
-    private final BoardConsoleRenderer renderer = new BoardConsoleRenderer();
+//    private final BoardConsoleRenderer renderer = new BoardConsoleRenderer();
 
     @Getter
     private Color colorToMove = Color.WHITE;
@@ -30,7 +30,7 @@ public class Game {
         this.board = board;
         this.gameId = UUID.randomUUID().toString().substring(0, 8);
     }
-
+/*
     public boolean makeMove(Coordinates from, Coordinates to) {
         MDC.put("gameId", gameId);
         try {
@@ -65,5 +65,5 @@ public class Game {
             isWhiteToMove = !isWhiteToMove;
             i++;
         }
-    }
+    }*/
 }

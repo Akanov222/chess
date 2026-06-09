@@ -2,7 +2,6 @@ package edu.iv.javacourse.board.fen;
 
 import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.piece.*;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.function.Supplier;
@@ -21,6 +20,7 @@ public class FenService {
     }
 
     public GameState createDefaultGame() {
+        log.debug("Starting default board setup");
         return fromFen(DEFAULT_FEN);
     }
 
@@ -65,8 +65,8 @@ public class FenService {
                 } else {
                     // Если буква — создаем фигуру
                     File file = File.getByIndex(fileIndex);
-                    Coordinates coords = new Coordinates(file, rank);
-                    board.setPiece(coords, createPieceByChar(c));
+                    Coordinates coordinates = new Coordinates(file, rank);
+                    board.setPiece(coordinates, createPieceByChar(c));
                     fileIndex++;
                 }
             }

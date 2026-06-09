@@ -3,6 +3,7 @@ package edu.iv.javacourse.move;
 import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Color;
 import edu.iv.javacourse.board.Coordinates;
+import edu.iv.javacourse.board.fen.GameState;
 import edu.iv.javacourse.piece.Piece;
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,7 +13,9 @@ import java.util.Set;
 public class MoveService {
     private final MoveGeneratorFactory factory = new MoveGeneratorFactory();
 
-    public MoveResult movePiece(Board board, Coordinates coordinatesFrom, Coordinates coordinatesTo, Color colorToMove) {
+    public MoveResult movePiece(GameState gameState, Coordinates coordinatesFrom, Coordinates coordinatesTo) {
+        Board board = gameState.getBoard();
+        Color colorToMove = "w".equals(gameState.getTurn()) ? Color.WHITE : Color.BLACK;
         Piece piece = board.getPiece(coordinatesFrom);
         if (piece == null) {
             log.info("Movement impossible: no piece at {}", coordinatesFrom);
@@ -26,7 +29,7 @@ public class MoveService {
 
         PieceMoveGenerator generator = factory.getGenerator(piece.getClass());
 
-        Set<Coordinates> availableMove = null;
+        Set<Coordinates> availableMove;
         try {
             availableMove = generator.getAvailableMoveSquares(coordinatesFrom, board);
         } catch (Exception e) {
@@ -43,6 +46,21 @@ public class MoveService {
 
         board.removePiece(coordinatesFrom);
         board.setPiece(coordinatesTo, piece);
+
+        gameState.setTurn(colorToMove == Color.WHITE ? "b" : "w");
+
+        if ("p".equalsIgnoreCase(piece.getClass().getSimpleName().substring(0, 1)) || capturedPiece != null) {
+            gameState.setHalfMove(0);
+        } else {
+            gameState.setHalfMove(gameState.getHalfMove() + 1);
+        }
+
+        if (colorToMove == Color.BLACK) {
+            gameState.setFullMove(gameState.getFullMove() + 1);
+        }
+
+        // TODO: В будущем здесь же обновлять gameState.setEnPassant() и gameState.setCastling()
+        // при ходах королей/ладей или двойных ходах пешек.
 
         log.info("Successfully moved {} from {} to {}. Captured {}",
                 piece.getClass().getSimpleName(), coordinatesFrom, coordinatesTo,
