@@ -6,17 +6,18 @@ import edu.iv.javacourse.board.CoordinatesShift;
 import edu.iv.javacourse.piece.Piece;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class KnightMoveGenerator implements PieceMoveGenerator{
     @Override
     public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, Board board) {
         Set<Coordinates> result = new HashSet<>();
-        Piece knight = board.getPiece(coordinatesFrom);
+        Optional<Piece> knight = board.getPiece(coordinatesFrom);
         for (CoordinatesShift shift : KNIGHTS_SHIFT()) {
             coordinatesFrom.shift(shift).ifPresent(coordinatesTo -> {
                 if (board.isSquareEmpty(coordinatesTo) ||
-                        (board.getPiece(coordinatesTo).color != knight.color)) {
+                        (board.getPiece(coordinatesTo).get().getColor() != knight.get().getColor())) {
                     result.add(coordinatesTo);
                 }
             });

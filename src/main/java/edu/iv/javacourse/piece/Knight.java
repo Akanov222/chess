@@ -9,9 +9,9 @@ public class Knight extends Piece {
     }
 
     @Override
-    public String getCode(Color color) {
+    public String getCode() {
         String code = String.valueOf(this.getClass().getSimpleName().charAt(1));
-        return color == Color.WHITE ? code.toUpperCase() : code.toLowerCase();
+        return this.getColor() == Color.WHITE ? code.toUpperCase() : code.toLowerCase();
     }
 }
 

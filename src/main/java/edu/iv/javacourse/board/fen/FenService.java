@@ -4,6 +4,7 @@ import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.piece.*;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 @Slf4j
@@ -104,8 +105,8 @@ public class FenService {
                         fen.append(emptySquares);
                         emptySquares = 0;
                     }
-                    Piece piece = board.getPiece(coordinates);
-                    fen.append(piece.getCode(piece.color));
+                    Optional<Piece> piece = board.getPiece(coordinates);
+                    fen.append(piece.get().getCode());
                 }
             }
             if (emptySquares > 0) {

@@ -5,12 +5,14 @@ import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
 import edu.iv.javacourse.board.fen.GameState;
 import edu.iv.javacourse.event.GameHistoryListener;
+import edu.iv.javacourse.move.MoveResult;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.slf4j.MDC;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -73,20 +75,25 @@ public class ChessServlet extends HttpServlet {
         MDC.put("gameId", gameId);
         String fromString = request.getParameter("from");
         String toString = request.getParameter("to");
+        HttpSession session = request.getSession();
+        GameState gameState1 = (GameState) session.getAttribute("gameState");
 
-        try {
-            Coordinates fromCoordinates = parseCoordinates(fromString);
-            Coordinates toCoordinates = parseCoordinates(toString);
-            boolean success = game.makeMove(fromCoordinates, toCoordinates);
+        if (gameState1 != null) {
+            try {
+                Coordinates fromCoordinates = parseCoordinates(fromString);
+                Coordinates toCoordinates = parseCoordinates(toString);
+                MoveResult result = gameService.makeMove(gameState1, fromCoordinates, toCoordinates, gameState1.getGameId());
+                boolean success = game.makeMove(fromCoordinates, toCoordinates);
 
-            if (!success) {
-                request.getSession().setAttribute("error", "Incorrect move");
+                if (!result.isSuccess()) {
+                    session.setAttribute("error", result.getMessage());
+                }
+            } catch (Exception e) {
+                request.getSession().setAttribute("error", "Incorrect format coordinates");
             }
-        } catch (Exception e) {
-            request.getSession().setAttribute("error", "Incorrect format coordinates");
+            response.sendRedirect(request.getContextPath() + "/game");
+            MDC.remove("gameId");
         }
-        response.sendRedirect(request.getContextPath() + "/game");
-        MDC.remove("gameId");
     }
 
     private Coordinates parseCoordinates(String inputStringCoordinates) {

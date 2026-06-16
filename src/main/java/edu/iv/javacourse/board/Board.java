@@ -2,8 +2,10 @@ package edu.iv.javacourse.board;
 
 import edu.iv.javacourse.piece.Piece;
 
+import java.util.Optional;
+
 public interface Board {
-    Piece getPiece(Coordinates coordinates);
+    Optional<Piece> getPiece(Coordinates coordinates);
     void setPiece(Coordinates coordinates, Piece piece);
     void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo);
     void removePiece(Coordinates coordinates);

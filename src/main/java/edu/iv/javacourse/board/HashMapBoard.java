@@ -17,12 +17,15 @@ public class HashMapBoard implements Board {
     private final Map<Coordinates, Piece> pieces = new HashMap<>();
 
     @Override
-    public Piece getPiece(Coordinates coordinates) {
-        return pieces.get(coordinates);
+    public Optional<Piece> getPiece(Coordinates coordinates) {
+        return Optional.ofNullable(pieces.get(coordinates));
     }
 
     @Override
     public void setPiece(Coordinates coordinates, Piece piece) {
+        if (pieces == null) {
+            throw new IllegalArgumentException("Cannot set a null piece. Use removePiece instead.");
+        }
         pieces.put(coordinates, piece);
     }
 
@@ -32,10 +35,8 @@ public class HashMapBoard implements Board {
     }
 
     public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
-        if (!pieces.containsKey(coordinatesFrom)) {
-            throw new IllegalMoveException("Haven't figure on these coordinates");
-        }
-        Piece piece = getPiece(coordinatesFrom);
+        Piece piece = getPiece(coordinatesFrom).orElseThrow(() ->
+                new IllegalMoveException("Haven't figure on these coordinates"));
         removePiece(coordinatesFrom);
         setPiece(coordinatesTo, piece);
     }
@@ -44,5 +45,4 @@ public class HashMapBoard implements Board {
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !pieces.containsKey(coordinates);
     }
-
 }
