@@ -10,4 +10,5 @@ public interface Board {
     void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo);
     void removePiece(Coordinates coordinates);
     boolean isSquareEmpty(Coordinates coordinates);
+    Board makeCopy();
 }

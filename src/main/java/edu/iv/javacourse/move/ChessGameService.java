@@ -28,7 +28,8 @@ public class ChessGameService {
         this.listeners.add(listener);
     }
 
-    public MoveResult makeMove(GameState gameState, Coordinates coordinatesFrom, Coordinates coordinatesTo, String gameId) {
+    public MoveResult makeMove(GameState gameState, Coordinates coordinatesFrom,
+                               Coordinates coordinatesTo, String gameId) {
         MDC.put("gameId", gameId);
         try {
             Board board = gameState.getBoard();
@@ -47,7 +48,7 @@ public class ChessGameService {
             }
 
             PieceMoveGenerator moveGenerator = moveGeneratorFactory
-                    .getGenerator((Class<? extends Optional<Piece>>) pieceOptional.getClass());
+                    .getGenerator(pieceOptional.getClass());
             Set<Coordinates> availableMoves = moveGenerator.getAvailableMoveSquares(coordinatesFrom, board);
 
             if (!availableMoves.contains(coordinatesTo)) {

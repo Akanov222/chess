@@ -45,4 +45,11 @@ public class HashMapBoard implements Board {
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !pieces.containsKey(coordinates);
     }
+
+    @Override
+    public Board makeCopy() {
+        HashMapBoard copy = new HashMapBoard();
+        copy.pieces.putAll(this.pieces);
+        return copy;
+    }
 }
