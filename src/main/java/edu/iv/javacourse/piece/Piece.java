@@ -11,11 +11,10 @@ abstract public class Piece {
         this.color = color;
     }
 
-    public abstract PieceType getType();
+    public abstract PieceType getPieceType();
 
     public String getCode() {
-        String code = getType().getPieceTypeCode();
+        String code = getPieceType().getPieceTypeCode();
         return color == Color.WHITE ? code.toUpperCase() : code.toLowerCase();
     }
 }
-

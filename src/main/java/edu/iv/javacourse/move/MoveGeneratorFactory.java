@@ -1,25 +1,27 @@
 package edu.iv.javacourse.move;
 
-import edu.iv.javacourse.piece.Knight;
-import edu.iv.javacourse.piece.Piece;
+import edu.iv.javacourse.piece.PieceType;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
-import java.util.Optional;
 
+@Slf4j
 public class MoveGeneratorFactory {
-    private final Map<Class<? extends Piece>, PieceMoveGenerator> generators = new HashMap<>();
+    private final Map<PieceType, PieceMoveGenerator> generators = new EnumMap<>(PieceType.class);
 
     public MoveGeneratorFactory() {
-        this.generators.put(Knight.class, new KnightMoveGenerator());
+        generators.put(PieceType.KNIGHT, new KnightMoveGenerator());
     }
 
-    public PieceMoveGenerator getGenerator(Class<? extends Optional> pieceClass) {
-        if (generators.containsKey(pieceClass)) {
-            return generators.get(pieceClass);
+    public PieceMoveGenerator getGenerator(PieceType pieceType) {
+        PieceMoveGenerator generator = generators.get(pieceType);
+
+        if (generator == null) {
+            log.debug("No generator found for {}", pieceType);
+            throw new IllegalStateException("Не предусмотрены ходы для фигуры " + pieceType);
         }
-        else {
-            throw new RuntimeException("No generator found for" + pieceClass.getSimpleName());
-        }
+
+        return generator;
     }
 }

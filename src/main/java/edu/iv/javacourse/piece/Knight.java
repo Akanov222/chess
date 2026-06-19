@@ -9,9 +9,7 @@ public class Knight extends Piece {
     }
 
     @Override
-    public PieceType getType() {
+    public PieceType getPieceType() {
         return PieceType.KNIGHT;
     }
 }
-
-

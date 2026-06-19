@@ -28,31 +28,34 @@ public class ChessGameService {
         this.listeners.add(listener);
     }
 
-    public MoveResult makeMove(GameState gameState, Coordinates coordinatesFrom,
-                               Coordinates coordinatesTo, String gameId) {
-        MDC.put("gameId", gameId);
+    public MoveResult makeMove(GameState gameState, Move move) {
+        MDC.put("gameId", gameState.getGameId());
         try {
             Board board = gameState.getBoard();
             Color colorToMove = "w".equals(gameState.getTurn()) ? Color.WHITE : Color.BLACK;
-            Optional<Piece> pieceOptional = board.getPiece(coordinatesFrom);
+
+            // 1. Есть ли фигура на старте?
+            Optional<Piece> pieceOptional = board.getPiece(move.getCoordinatesFrom());
             if (pieceOptional.isEmpty()) {
-                log.debug("Movement impossible: no piece at {}", coordinatesFrom);
+                log.debug("Movement impossible: no piece at {}", move.getCoordinatesFrom());
                 return MoveResult.error("На выбранной клетке нет фигуры");
             }
 
             Piece piece = pieceOptional.get();
 
+            // 2. Очерёдность хода
             if (piece.getColor() != colorToMove) {
                 log.debug("Move rejected: invalid turn color. Expected: {}, Got: {}", colorToMove, piece.getColor());
                 return MoveResult.error("Сейчас ход другой стороны");
             }
 
-            PieceMoveGenerator moveGenerator = moveGeneratorFactory
-                    .getGenerator(pieceOptional.getClass());
-            Set<Coordinates> availableMoves = moveGenerator.getAvailableMoveSquares(coordinatesFrom, board);
+            // 3. УРОВЕНЬ 1: псевдолегальность (геометрия)
+            PieceMoveGenerator moveGenerator = moveGeneratorFactory.getGenerator(piece.getPieceType());
+            Set<Coordinates> availableMoves =
+                    moveGenerator.getAvailableMoveSquares(move.getCoordinatesFrom(), gameState);
 
-            if (!availableMoves.contains(coordinatesTo)) {
-                log.debug("");
+            if (!availableMoves.contains(move.getCoordinatesTo())) {
+                log.debug("Move rejected: invalid move to {}", move.getCoordinatesTo());
                 return MoveResult.error("Фигура так ходить не может");
             }
 

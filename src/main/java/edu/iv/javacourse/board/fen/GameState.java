@@ -22,4 +22,15 @@ public class GameState {
     public GameState(String gameId) {
         this.gameId = UUID.randomUUID().toString().substring(0, 8);
     }
+
+    public GameState copyForSimulation() {
+        GameState copyGameState = new GameState(this.gameId);
+        copyGameState.setBoard(this.board.makeCopy());
+        copyGameState.setTurn(this.turn);
+        copyGameState.setCastling(this.castling);
+        copyGameState.setEnPassant(this.enPassant);
+        copyGameState.setHalfMove(this.halfMove);
+        copyGameState.setFullMove(this.fullMove);
+        return copyGameState;
+    }
 }

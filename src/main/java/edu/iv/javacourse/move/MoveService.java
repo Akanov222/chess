@@ -20,12 +20,12 @@ public class MoveService {
         Optional<Piece> piece = board.getPiece(coordinatesFrom);
         if (piece.isEmpty()) {
             log.info("Movement impossible: no piece at {}", coordinatesFrom);
-            return MoveResult.error("");
+            return MoveResult.error("Сначала выберите фигуру для хода");
         }
 
         if (piece.get().getColor() != colorToMove) {
             log.info("Movement impossible: it's {}'s turn, but {} piece selected", colorToMove, piece.get().getColor());
-            return MoveResult.error("");
+            return MoveResult.error("Сейчас ход другого игрока");
         }
 
         PieceMoveGenerator generator = factory.getGenerator(piece.getClass());
