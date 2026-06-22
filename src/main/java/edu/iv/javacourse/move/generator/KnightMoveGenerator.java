@@ -1,9 +1,9 @@
-package edu.iv.javacourse.move;
+package edu.iv.javacourse.move.generator;
 
 import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.board.CoordinatesShift;
-import edu.iv.javacourse.board.fen.GameState;
+import edu.iv.javacourse.game.GameState;
 import edu.iv.javacourse.piece.Piece;
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class KnightMoveGenerator implements PieceMoveGenerator{
     @Override
-    public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState  gameState) {
+    public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState gameState) {
         Board board = gameState.getBoard();
         Piece knight = board.getPiece(coordinatesFrom).orElseThrow(
                 () -> new IllegalStateException("На клетке " + coordinatesFrom + " нет фигуры"));

@@ -1,11 +1,10 @@
 package edu.iv.javacourse.servlet;
 
-import edu.iv.javacourse.Game;
 import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
-import edu.iv.javacourse.board.fen.GameState;
-import edu.iv.javacourse.event.GameHistoryListener;
+import edu.iv.javacourse.game.GameState;
 import edu.iv.javacourse.move.MoveResult;
+import edu.iv.javacourse.view.BoardHtmlRenderer;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

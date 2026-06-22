@@ -1,5 +1,7 @@
-package edu.iv.javacourse.board;
+package edu.iv.javacourse.view;
 
+import edu.iv.javacourse.board.Color;
+import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.piece.Piece;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

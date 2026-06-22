@@ -1,6 +1,7 @@
 package edu.iv.javacourse.board.fen;
 
 import edu.iv.javacourse.board.*;
+import edu.iv.javacourse.game.GameState;
 import edu.iv.javacourse.piece.*;
 import lombok.extern.slf4j.Slf4j;
 

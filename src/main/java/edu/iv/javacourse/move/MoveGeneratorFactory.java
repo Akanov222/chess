@@ -1,5 +1,7 @@
 package edu.iv.javacourse.move;
 
+import edu.iv.javacourse.move.generator.KnightMoveGenerator;
+import edu.iv.javacourse.move.generator.PieceMoveGenerator;
 import edu.iv.javacourse.piece.PieceType;
 import lombok.extern.slf4j.Slf4j;
 

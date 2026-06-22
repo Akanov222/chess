@@ -1,14 +1,10 @@
 package edu.iv.javacourse;
 
 import edu.iv.javacourse.board.*;
-import edu.iv.javacourse.event.GameEventListener;
-import edu.iv.javacourse.event.MoveEvent;
-import edu.iv.javacourse.move.MoveResult;
+import edu.iv.javacourse.event.listener.GameEventListener;
 import edu.iv.javacourse.move.MoveService;
-import edu.iv.javacourse.piece.Piece;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.MDC;
 
 import java.util.ArrayList;
 import java.util.List;

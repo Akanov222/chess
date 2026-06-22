@@ -1,4 +1,4 @@
-package edu.iv.javacourse.board.fen;
+package edu.iv.javacourse.game;
 
 import edu.iv.javacourse.board.Board;
 import lombok.AllArgsConstructor;

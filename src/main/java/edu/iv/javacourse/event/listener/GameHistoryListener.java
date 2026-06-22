@@ -1,5 +1,6 @@
-package edu.iv.javacourse.event;
+package edu.iv.javacourse.event.listener;
 
+import edu.iv.javacourse.event.MoveEvent;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

@@ -1,8 +1,7 @@
-package edu.iv.javacourse.move;
+package edu.iv.javacourse.move.generator;
 
-import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Coordinates;
-import edu.iv.javacourse.board.fen.GameState;
+import edu.iv.javacourse.game.GameState;
 
 import java.util.Set;
 

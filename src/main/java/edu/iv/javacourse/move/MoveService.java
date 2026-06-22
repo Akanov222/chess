@@ -3,7 +3,8 @@ package edu.iv.javacourse.move;
 import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Color;
 import edu.iv.javacourse.board.Coordinates;
-import edu.iv.javacourse.board.fen.GameState;
+import edu.iv.javacourse.game.GameState;
+import edu.iv.javacourse.move.generator.PieceMoveGenerator;
 import edu.iv.javacourse.piece.Piece;
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,5 +1,8 @@
-package edu.iv.javacourse.board;
+package edu.iv.javacourse.view;
 
+import edu.iv.javacourse.board.Board;
+import edu.iv.javacourse.board.Coordinates;
+import edu.iv.javacourse.board.File;
 import edu.iv.javacourse.piece.*;
 
 import java.util.ArrayList;
@@ -7,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class BoardHtmlRenderer implements BordRenderer<List<List<SquareView>>>{
+public class BoardHtmlRenderer implements BoardRenderer<List<List<SquareView>>> {
     private final Map<Class<? extends Piece>, String> pieceSprites = Map.of(
             Pawn.class, "♙",
             Knight.class, "♘",
