@@ -24,16 +24,13 @@ public class Move {
 
     public Move(Coordinates coordinatesFrom, Coordinates coordinatesTo, MoveType moveType, PieceType promotionTo) {
         if (coordinatesFrom == null || coordinatesTo == null) {
-            log.debug("Coordinates from and to should be not null");
-            throw new IllegalArgumentException("from/to не могут быть null");
+            throw new IllegalArgumentException("Coordinates from and to should be not null");
         }
         if (moveType == null) {
-            log.debug("Type should be not null");
-            throw new IllegalArgumentException("type не может быть null");
+            throw new IllegalArgumentException("Type should be not null");
         }
         if ((moveType == MoveType.PROMOTION || moveType == MoveType.PROMOTION_WITH_CAPTURE) && promotionTo == null) {
-            log.debug("The promotion figure type should be not null");
-            throw new IllegalArgumentException("Для превращения нужна фигура");
+            throw new IllegalArgumentException("The promotion figure type should be not null");
         }
 
         this.coordinatesFrom = coordinatesFrom;

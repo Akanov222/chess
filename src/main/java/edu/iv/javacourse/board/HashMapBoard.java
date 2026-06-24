@@ -34,12 +34,18 @@ public class HashMapBoard implements Board {
         pieces.remove(coordinates);
     }
 
+    @Override
+    public Map<Coordinates, Piece> getPiecesMap() {
+        return pieces;
+    }
+/*
+    @Override
     public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
         Piece piece = getPiece(coordinatesFrom).orElseThrow(() ->
                 new IllegalMoveException("Haven't figure on these coordinates"));
         removePiece(coordinatesFrom);
         setPiece(coordinatesTo, piece);
-    }
+    }*/
 
     @Override
     public boolean isSquareEmpty(Coordinates coordinates) {

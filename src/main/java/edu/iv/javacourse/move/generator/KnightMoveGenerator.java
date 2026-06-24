@@ -14,7 +14,7 @@ public class KnightMoveGenerator implements PieceMoveGenerator{
     public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState gameState) {
         Board board = gameState.getBoard();
         Piece knight = board.getPiece(coordinatesFrom).orElseThrow(
-                () -> new IllegalStateException("На клетке " + coordinatesFrom + " нет фигуры"));
+                () -> new IllegalStateException("On coordinates " + coordinatesFrom + " should be figure"));
 
         Set<Coordinates> result = new HashSet<>();
         for (CoordinatesShift shift : KNIGHTS_SHIFT()) {

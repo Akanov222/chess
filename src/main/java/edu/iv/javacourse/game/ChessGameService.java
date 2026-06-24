@@ -9,14 +9,12 @@ import edu.iv.javacourse.move.Move;
 import edu.iv.javacourse.move.MoveGeneratorFactory;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.move.generator.PieceMoveGenerator;
+import edu.iv.javacourse.piece.King;
 import edu.iv.javacourse.piece.Piece;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Slf4j
 public class ChessGameService {
@@ -72,10 +70,9 @@ public class ChessGameService {
             // 5. Применяем настоящий ход
             Piece pieceCaptured = board.getPiece(move.getCoordinatesTo()).orElse(null);
             applyMoveOnBoard(board, move);
-            log.info("Successfully moved {} from {} to {}. Captured {}",
+            log.debug("Successfully moved {} from {} to {}. Captured {}",
                     piece.getPieceType().getPieceTypeCode(), move.getCoordinatesFrom(), move.getCoordinatesTo(),
                     pieceCaptured != null ? pieceCaptured.getPieceType().getPieceTypeCode() : "none.");
-
             return MoveResult.success(pieceCaptured);
             // TODO: обновить turn, halfMove/fullMove, права на рокировку, enPassant
             // TODO: оповестить listeners
@@ -95,14 +92,28 @@ public class ChessGameService {
 
     private void applyMoveOnBoard(Board board, Move move) {
         Piece piece = board.getPiece(move.getCoordinatesFrom())
-                .or(() -> {
-                    log.debug("Square from coordinates {} is empty", move.getCoordinatesFrom());
-                    return Optional.empty();
-                })
-                .orElseThrow(() -> new IllegalArgumentException("Фигура не найдена)"
-                ));
+                .orElseThrow(() -> new IllegalArgumentException("Figure not found"));
         board.removePiece(move.getCoordinatesFrom());
         board.setPiece(move.getCoordinatesTo(), piece);
+    }
+
+    private boolean isKingUnderAttack(GameState simulatedGameState, Color colorToMove) {
+        Board board = simulatedGameState.getBoard();
+        Piece pieceKing = new King(colorToMove);
+        Map<Coordinates, Piece> piecesMap = board.getPiecesMap();
+        Coordinates kingCoordinates = findPieceStream(piecesMap, pieceKing, colorToMove);
+
+        return ;
+    }
+
+    private Coordinates findPieceStream(Map<Coordinates, Piece> piecesMap, Piece piece, Color colorToMove) {
+        return piecesMap.entrySet().stream()
+                .filter(entry -> entry.getValue().getPieceType().getPieceTypeCode()
+                        .equals(piece.getPieceType().getPieceTypeCode()) &&
+                            entry.getValue().getColor() == colorToMove)
+                        .map(Map.Entry::getKey)
+                        .findFirst()
+                        .orElseThrow(() -> new IllegalArgumentException("Figure not fund"));
     }
 
 

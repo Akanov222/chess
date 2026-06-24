@@ -20,12 +20,12 @@ public class MoveService {
         Color colorToMove = "w".equals(gameState.getTurn()) ? Color.WHITE : Color.BLACK;
         Optional<Piece> piece = board.getPiece(coordinatesFrom);
         if (piece.isEmpty()) {
-            log.info("Movement impossible: no piece at {}", coordinatesFrom);
+            log.debug("Movement impossible: no piece at {}", coordinatesFrom);
             return MoveResult.error("Сначала выберите фигуру для хода");
         }
 
         if (piece.get().getColor() != colorToMove) {
-            log.info("Movement impossible: it's {}'s turn, but {} piece selected", colorToMove, piece.get().getColor());
+            log.debug("Movement impossible: it's {}'s turn, but {} piece selected", colorToMove, piece.get().getColor());
             return MoveResult.error("Сейчас ход другого игрока");
         }
 
@@ -64,7 +64,7 @@ public class MoveService {
         // TODO: В будущем здесь же обновлять gameState.setEnPassant() и gameState.setCastling()
         // при ходах королей/ладей или двойных ходах пешек.
 
-        log.info("Successfully moved {} from {} to {}. Captured {}",
+        log.debug("Successfully moved {} from {} to {}. Captured {}",
                 piece.getClass().getSimpleName(), coordinatesFrom, coordinatesTo,
                 capturedPiece.isPresent() ? capturedPiece.getClass().getSimpleName() : "none.");
         return MoveResult.success(capturedPiece.orElse(null));

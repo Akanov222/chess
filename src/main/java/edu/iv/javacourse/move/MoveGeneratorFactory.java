@@ -20,8 +20,7 @@ public class MoveGeneratorFactory {
         PieceMoveGenerator generator = generators.get(pieceType);
 
         if (generator == null) {
-            log.debug("No generator found for {}", pieceType);
-            throw new IllegalStateException("Не предусмотрены ходы для фигуры " + pieceType);
+            throw new IllegalStateException("No generator found for piece");
         }
 
         return generator;
