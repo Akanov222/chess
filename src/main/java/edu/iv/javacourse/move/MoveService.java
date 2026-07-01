@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Slf4j
 public class MoveService {
-    private final MoveGeneratorFactory factory = new MoveGeneratorFactory();
+    /*private final MoveGeneratorFactory factory = new MoveGeneratorFactory();
 
     public MoveResult movePiece(GameState gameState, Coordinates coordinatesFrom, Coordinates coordinatesTo) {
         Board board = gameState.getBoard();
@@ -68,5 +68,5 @@ public class MoveService {
                 piece.getClass().getSimpleName(), coordinatesFrom, coordinatesTo,
                 capturedPiece.isPresent() ? capturedPiece.getClass().getSimpleName() : "none.");
         return MoveResult.success(capturedPiece.orElse(null));
-    }
+    }*/
 }

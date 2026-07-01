@@ -14,7 +14,12 @@ public class FenService {
     private final Supplier<Board> boardSupplier;
 
     public FenService() {
-        this.boardSupplier = HashMapBoard::new;
+        this.boardSupplier = new Supplier<>() {
+            @Override
+            public HashMapBoard get() {
+                return new HashMapBoard();
+            }
+        };
     }
 
     public FenService(Supplier<Board> boardSupplier) {

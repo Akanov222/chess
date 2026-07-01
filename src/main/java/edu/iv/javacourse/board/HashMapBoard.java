@@ -1,31 +1,31 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.board.fen.FenService;
-import edu.iv.javacourse.exception.IllegalMoveException;
+import edu.iv.javacourse.piece.King;
 import edu.iv.javacourse.piece.Piece;
+import edu.iv.javacourse.piece.PieceType;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 @NoArgsConstructor
+@AllArgsConstructor
 public class HashMapBoard implements Board {
     private final Map<Coordinates, Piece> pieces = new HashMap<>();
 
     @Override
     public Optional<Piece> getPiece(Coordinates coordinates) {
+        Objects.requireNonNull(coordinates, "Coordinates can't be null");
         return Optional.ofNullable(pieces.get(coordinates));
     }
 
     @Override
     public void setPiece(Coordinates coordinates, Piece piece) {
-        if (pieces == null) {
-            throw new IllegalArgumentException("Cannot set a null piece. Use removePiece instead.");
-        }
+        Objects.requireNonNull(coordinates, "Coordinates can't be null");
+        Objects.requireNonNull(piece, "Cannot set a null piece.");
         pieces.put(coordinates, piece);
     }
 
@@ -35,17 +35,28 @@ public class HashMapBoard implements Board {
     }
 
     @Override
-    public Map<Coordinates, Piece> getPiecesMap() {
-        return pieces;
+    public List<Coordinates> findAllPieces(PieceType pieceType, Color colorToMove) {
+        return pieces.entrySet().stream()
+                .filter(entry -> entry.getValue().getPieceType().getPieceTypeCode()
+                        .equals(pieceType.getPieceTypeCode()) &&
+                        entry.getValue().getColor() == colorToMove)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
     }
-/*
+
     @Override
-    public void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo) {
-        Piece piece = getPiece(coordinatesFrom).orElseThrow(() ->
-                new IllegalMoveException("Haven't figure on these coordinates"));
-        removePiece(coordinatesFrom);
-        setPiece(coordinatesTo, piece);
-    }*/
+    public Optional<Coordinates> findKing(Color colorToMove) {
+        List<Coordinates> kings = findAllPieces(PieceType.KING, colorToMove);
+        return kings.isEmpty() ? Optional.empty() : Optional.of(kings.get(0));
+    }
+
+    @Override
+    public Collection<Coordinates> getPiecesCoordinatesByColor(Color color) {
+        return pieces.entrySet().stream()
+                .filter(entry -> entry.getValue().getColor() == color)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+    }
 
     @Override
     public boolean isSquareEmpty(Coordinates coordinates) {

@@ -9,8 +9,8 @@ import edu.iv.javacourse.move.Move;
 import edu.iv.javacourse.move.MoveGeneratorFactory;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.move.generator.PieceMoveGenerator;
-import edu.iv.javacourse.piece.King;
 import edu.iv.javacourse.piece.Piece;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 
@@ -92,30 +92,31 @@ public class ChessGameService {
 
     private void applyMoveOnBoard(Board board, Move move) {
         Piece piece = board.getPiece(move.getCoordinatesFrom())
-                .orElseThrow(() -> new IllegalArgumentException("Figure not found"));
+                .orElseThrow(() -> new IllegalArgumentException("Figure is not found"));
         board.removePiece(move.getCoordinatesFrom());
         board.setPiece(move.getCoordinatesTo(), piece);
     }
 
+    @SneakyThrows
     private boolean isKingUnderAttack(GameState simulatedGameState, Color colorToMove) {
         Board board = simulatedGameState.getBoard();
-        Piece pieceKing = new King(colorToMove);
-        Map<Coordinates, Piece> piecesMap = board.getPiecesMap();
-        Coordinates kingCoordinates = findPieceStream(piecesMap, pieceKing, colorToMove);
 
-        return ;
+        Optional<Coordinates> kingCoordinates = Optional.ofNullable(board.findKing(colorToMove)
+                .orElseThrow(() -> new RuntimeException()));
+        Color opponentColor = (colorToMove == Color.WHITE) ? Color.BLACK : Color.WHITE;
+        Collection<Coordinates> opponentPiecesCoordinates = board.getPiecesCoordinatesByColor(opponentColor);
+
+        for (Coordinates opponentCoordinate : opponentPiecesCoordinates) {
+            Piece opponentPiece = board.getPiece(opponentCoordinate)
+                    .orElseThrow(() -> new IllegalArgumentException("Date error on coordinates"));
+            PieceMoveGenerator moveGenerator = moveGeneratorFactory.getGenerator(opponentPiece.getPieceType());
+            Set<Coordinates> attackedSquares = moveGenerator.getAvailableMoveSquares(opponentCoordinate, simulatedGameState);
+
+            if (attackedSquares.contains(kingCoordinates)) {
+                return true;
+            }
+        }
+
+        return false;
     }
-
-    private Coordinates findPieceStream(Map<Coordinates, Piece> piecesMap, Piece piece, Color colorToMove) {
-        return piecesMap.entrySet().stream()
-                .filter(entry -> entry.getValue().getPieceType().getPieceTypeCode()
-                        .equals(piece.getPieceType().getPieceTypeCode()) &&
-                            entry.getValue().getColor() == colorToMove)
-                        .map(Map.Entry::getKey)
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalArgumentException("Figure not fund"));
-    }
-
-
-
 }

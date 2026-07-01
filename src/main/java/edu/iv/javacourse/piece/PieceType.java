@@ -1,5 +1,10 @@
 package edu.iv.javacourse.piece;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum PieceType {
     KING("K"),
     QUEEN("Q"),
@@ -9,12 +14,4 @@ public enum PieceType {
     PAWN("P");
 
     public final String pieceTypeCode;
-
-    PieceType(String pieceTypeCode) {
-        this.pieceTypeCode = pieceTypeCode;
-    }
-
-    public String getPieceTypeCode() {
-        return pieceTypeCode;
-    }
 }

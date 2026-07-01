@@ -26,7 +26,7 @@ public class ChessServlet extends HttpServlet {
     private final String gameId = "";
 //    private Game game;
     private GameState gameState;
-    private Board board;
+//    private Board board;
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
 

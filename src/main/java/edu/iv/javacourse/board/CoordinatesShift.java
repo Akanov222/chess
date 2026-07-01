@@ -1,9 +1,13 @@
 package edu.iv.javacourse.board;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @AllArgsConstructor
 public class CoordinatesShift {
-    public final int fileShift;
-    public final int rankShift;
+    private final int fileShift;
+    private final int rankShift;
 }
