@@ -2,6 +2,9 @@ package edu.iv.javacourse.servlet;
 
 import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
+import edu.iv.javacourse.event.GameEventPublisher;
+import edu.iv.javacourse.event.listener.GameEventListener;
+import edu.iv.javacourse.game.ChessGameService;
 import edu.iv.javacourse.game.GameState;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.view.BoardHtmlRenderer;
@@ -19,28 +22,29 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 import org.thymeleaf.templateresolver.WebApplicationTemplateResolver;
 
 import java.io.IOException;
-import java.util.function.Supplier;
 
 @WebServlet(urlPatterns = "/game")
 public class ChessServlet extends HttpServlet {
-    private final String gameId = "";
-//    private Game game;
     private GameState gameState;
-//    private Board board;
+    private GameEventListener listener;
+    private String gameId = "";
+
+    private ChessGameService chessGameService;
+    private FenService fenService;
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-
         super.init(config);
-        this.board = new HashMapBoard();
-        FenService fenService = new FenService((Supplier<Board>) board);
+        this.fenService = new FenService(HashMapBoard::new);
         gameState = fenService.createDefaultGame();
+        gameId = gameState.getGameId();
         this.renderer = new BoardHtmlRenderer();
-//        this.game = new Game(board);
-//        this.game.addListener(new GameHistoryListener());
+        chessGameService.getPublisher().addListener(listener);
+        chessGameService.getPublisher().publishGameStarted();
 
+        // Настройка Thymeleaf
         var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
         var resolver = new WebApplicationTemplateResolver(jakartaApplication);
         resolver.setPrefix("/WEB-INF/templates/");
@@ -55,13 +59,13 @@ public class ChessServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        MDC.put("gameId", gameId);
+        MDC.put("gameId", gameState.getGameId());
         var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
         var exchange = jakartaApplication.buildExchange(request, response);
         var context = new WebContext(exchange);
 
-        context.setVariable("boardRows", renderer.getBoardView(board));
-        context.setVariable("turn", game.getColorToMove());
+        context.setVariable("boardRows", renderer.getBoardView(gameState.getBoard()));
+        context.setVariable("turn", gameState.getTurn());
         context.setVariable("error", request.getSession().getAttribute("error"));
         request.getSession().removeAttribute("error"); // Чистим после показа
         response.setContentType("text/html;charset=UTF-8");

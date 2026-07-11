@@ -3,6 +3,8 @@ package edu.iv.javacourse.game;
 import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Color;
 import edu.iv.javacourse.board.Coordinates;
+import edu.iv.javacourse.event.GameEventPublisher;
+import edu.iv.javacourse.event.MoveEvent;
 import edu.iv.javacourse.event.listener.GameEventListener;
 import edu.iv.javacourse.event.listener.GameHistoryListener;
 import edu.iv.javacourse.move.Move;
@@ -10,6 +12,7 @@ import edu.iv.javacourse.move.MoveGeneratorFactory;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.move.generator.PieceMoveGenerator;
 import edu.iv.javacourse.piece.Piece;
+import lombok.Getter;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
@@ -17,16 +20,13 @@ import org.slf4j.MDC;
 import java.util.*;
 
 @Slf4j
+@Getter
 public class ChessGameService {
     private final MoveGeneratorFactory moveGeneratorFactory = new MoveGeneratorFactory();
-    private final List<GameEventListener> listeners = new ArrayList<>();
+    private final GameEventPublisher publisher;
 
-    public ChessGameService() {
-        this.listeners.add(new GameHistoryListener());
-    }
-
-    public void addListener(GameEventListener listener) {
-        this.listeners.add(listener);
+    public ChessGameService(GameEventPublisher publisher) {
+        this.publisher = publisher;
     }
 
     public MoveResult makeMove(GameState gameState, Move move) {
@@ -60,7 +60,7 @@ public class ChessGameService {
             }
 
             // 4. УРОВЕНЬ 2: не подставляем ли своего короля
-            GameState simulatedGameState = gameState.copyForSimulation();
+            GameState simulatedGameState = gameState.copyForSimulation(gameState.getGameId());
             applyMoveOnBoard(simulatedGameState.getBoard(), move);
             if (isKingUnderAttack(simulatedGameState, colorToMove)) {
                 log.debug("Move rejected: own king would be under attack");
@@ -73,15 +73,18 @@ public class ChessGameService {
             log.debug("Successfully moved {} from {} to {}. Captured {}",
                     piece.getPieceType().getPieceTypeCode(), move.getCoordinatesFrom(), move.getCoordinatesTo(),
                     pieceCaptured != null ? pieceCaptured.getPieceType().getPieceTypeCode() : "none.");
+
+            MoveEvent moveEvent = new MoveEvent(piece, move.getCoordinatesFrom(), move.getCoordinatesTo(),
+                    pieceCaptured);
+            notifyMove(moveEvent);
             return MoveResult.success(pieceCaptured);
             // TODO: обновить turn, halfMove/fullMove, права на рокировку, enPassant
-            // TODO: оповестить listeners
 
         } catch (Exception e) {
             log.error("Critical error during move execution", e);
             return MoveResult.error("Внутренняя ошибка сервера при обработке хода");
         } finally {
-            MDC.remove(gameState.getGameId());
+            MDC.remove("gameId");
         }
     }
 
@@ -101,7 +104,7 @@ public class ChessGameService {
     private boolean isKingUnderAttack(GameState simulatedGameState, Color colorToMove) {
         Board board = simulatedGameState.getBoard();
 
-        Optional<Coordinates> kingCoordinates = Optional.ofNullable(board.findKing(colorToMove)
+        Optional<Coordinates> optionalKingCoordinates = Optional.ofNullable(board.findKing(colorToMove)
                 .orElseThrow(() -> new RuntimeException()));
         Color opponentColor = (colorToMove == Color.WHITE) ? Color.BLACK : Color.WHITE;
         Collection<Coordinates> opponentPiecesCoordinates = board.getPiecesCoordinatesByColor(opponentColor);
@@ -112,11 +115,22 @@ public class ChessGameService {
             PieceMoveGenerator moveGenerator = moveGeneratorFactory.getGenerator(opponentPiece.getPieceType());
             Set<Coordinates> attackedSquares = moveGenerator.getAvailableMoveSquares(opponentCoordinate, simulatedGameState);
 
-            if (attackedSquares.contains(kingCoordinates)) {
+            Coordinates kingingCoordinates = optionalKingCoordinates.get();
+            if (attackedSquares.contains(kingingCoordinates)) {
                 return true;
             }
         }
 
         return false;
+    }
+
+    private void notifyMove(MoveEvent moveEvent) {
+        for (GameEventListener listener : publisher.getListeners()) {
+            try {
+                listener.onMove(moveEvent);
+            } catch (Exception e) {
+                log.error("Listener failed on onMove", e);
+            }
+        }
     }
 }

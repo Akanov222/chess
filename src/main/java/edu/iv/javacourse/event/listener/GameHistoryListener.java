@@ -13,13 +13,13 @@ public class GameHistoryListener implements GameEventListener {
 
     @Override
     public void onMove(MoveEvent event) {
-        String capturedInfo = event.capturedPiece != null ?
-                String.format(" (captured %s)", event.capturedPiece.getClass().getSimpleName()) :
+        String capturedInfo = event.getCapturedPiece() != null ?
+                String.format(" (captured %s)", event.getCapturedPiece().getClass().getSimpleName()) :
                 "";
 
         log.info("{} moved {} -> {}{}",
-                event.piece.getClass().getSimpleName(), event.fromCoordinates,
-                event.toCoordinates, capturedInfo);
+                event.getPiece().getClass().getSimpleName(), event.getFromCoordinates(),
+                event.getToCoordinates(), capturedInfo);
     }
 
     @Override

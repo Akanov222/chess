@@ -3,16 +3,12 @@ package edu.iv.javacourse.board;
 import edu.iv.javacourse.piece.King;
 import edu.iv.javacourse.piece.Piece;
 import edu.iv.javacourse.piece.PieceType;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
-@NoArgsConstructor
-@AllArgsConstructor
 public class HashMapBoard implements Board {
     private final Map<Coordinates, Piece> pieces = new HashMap<>();
 

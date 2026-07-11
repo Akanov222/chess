@@ -6,21 +6,14 @@ import edu.iv.javacourse.piece.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Optional;
+import java.util.UUID;
 import java.util.function.Supplier;
 
 @Slf4j
 public class FenService {
-    private final String DEFAULT_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+    private static final String DEFAULT_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
     private final Supplier<Board> boardSupplier;
-
-    public FenService() {
-        this.boardSupplier = new Supplier<>() {
-            @Override
-            public HashMapBoard get() {
-                return new HashMapBoard();
-            }
-        };
-    }
+    private String newGameId = UUID.randomUUID().toString().substring(0, 8);
 
     public FenService(Supplier<Board> boardSupplier) {
         this.boardSupplier = boardSupplier;
@@ -44,7 +37,7 @@ public class FenService {
         Board board = boardSupplier.get();
         fenParser(position, board);
 
-        GameState gameState = new GameState();
+        GameState gameState = new GameState(newGameId);
         gameState.setBoard(board);
         gameState.setTurn(parts[1]);
         gameState.setCastling(parts[2]);
@@ -112,7 +105,7 @@ public class FenService {
                         emptySquares = 0;
                     }
                     Optional<Piece> piece = board.getPiece(coordinates);
-                    fen.append(piece.get().getCode());
+                    piece.ifPresent(p -> fen.append(p.getCode()));
                 }
             }
             if (emptySquares > 0) {
@@ -123,7 +116,7 @@ public class FenService {
             }
         }
 
-        fen.append(" ").append(gameState.getTurn().equals("w") ? "w" : "b");
+        fen.append(" ").append("w".equals(gameState.getTurn()) ? "w" : "b");
         fen.append(" ").append(gameState.getCastling());
         fen.append(" ").append(gameState.getEnPassant());
         fen.append(" ").append(gameState.getHalfMove());

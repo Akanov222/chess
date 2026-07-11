@@ -10,9 +10,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class MoveEvent {
-    public Piece piece;
-    public Coordinates fromCoordinates;
-    public Coordinates toCoordinates;
-    public Piece capturedPiece;
+    private Piece piece;
+    private Coordinates fromCoordinates;
+    private Coordinates toCoordinates;
+    private Piece capturedPiece;
 
 }

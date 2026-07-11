@@ -19,12 +19,16 @@ public class GameState {
     int halfMove;
     int fullMove;
 
-    public GameState(String gameId) {
+    public GameState() {
         this.gameId = UUID.randomUUID().toString().substring(0, 8);
     }
 
-    public GameState copyForSimulation() {
-        GameState copyGameState = new GameState(this.gameId);
+    public GameState(String gameId) {
+        this.gameId = gameId;
+    }
+
+    public GameState copyForSimulation(String gameId) {
+        GameState copyGameState = new GameState(gameId);
         copyGameState.setBoard(this.board.makeCopy());
         copyGameState.setTurn(this.turn);
         copyGameState.setCastling(this.castling);
