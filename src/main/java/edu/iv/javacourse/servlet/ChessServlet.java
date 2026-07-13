@@ -4,8 +4,10 @@ import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
 import edu.iv.javacourse.event.GameEventPublisher;
 import edu.iv.javacourse.event.listener.GameEventListener;
+import edu.iv.javacourse.event.listener.GameHistoryListener;
 import edu.iv.javacourse.game.ChessGameService;
 import edu.iv.javacourse.game.GameState;
+import edu.iv.javacourse.move.Move;
 import edu.iv.javacourse.move.MoveResult;
 import edu.iv.javacourse.view.BoardHtmlRenderer;
 import jakarta.servlet.ServletConfig;
@@ -15,6 +17,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -23,11 +26,12 @@ import org.thymeleaf.templateresolver.WebApplicationTemplateResolver;
 
 import java.io.IOException;
 
+@Slf4j
 @WebServlet(urlPatterns = "/game")
 public class ChessServlet extends HttpServlet {
     private GameState gameState;
-    private GameEventListener listener;
     private String gameId = "";
+    private final Object lock = new Object();
 
     private ChessGameService chessGameService;
     private FenService fenService;
@@ -37,14 +41,21 @@ public class ChessServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        this.fenService = new FenService(HashMapBoard::new);
-        gameState = fenService.createDefaultGame();
-        gameId = gameState.getGameId();
-        this.renderer = new BoardHtmlRenderer();
-        chessGameService.getPublisher().addListener(listener);
-        chessGameService.getPublisher().publishGameStarted();
 
-        // Настройка Thymeleaf
+        // 1. Событийная инфраструктура
+        GameEventPublisher publisher = new GameEventPublisher();
+        publisher.addListener(new GameHistoryListener());
+
+        // 2. Сервисы
+        this.fenService = new FenService(HashMapBoard::new);
+        this.chessGameService = new ChessGameService(publisher);
+        this.renderer = new BoardHtmlRenderer();
+
+        // 3. Стартовая партия + событие onGameStarted
+        gameState = fenService.createDefaultGame();
+        publisher.publishGameStarted();
+
+        // 4. Thymeleaf
         var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
         var resolver = new WebApplicationTemplateResolver(jakartaApplication);
         resolver.setPrefix("/WEB-INF/templates/");
@@ -59,44 +70,61 @@ public class ChessServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        MDC.put("gameId", gameState.getGameId());
-        var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
-        var exchange = jakartaApplication.buildExchange(request, response);
-        var context = new WebContext(exchange);
 
-        context.setVariable("boardRows", renderer.getBoardView(gameState.getBoard()));
-        context.setVariable("turn", gameState.getTurn());
-        context.setVariable("error", request.getSession().getAttribute("error"));
-        request.getSession().removeAttribute("error"); // Чистим после показа
-        response.setContentType("text/html;charset=UTF-8");
-        templateEngine.process("chess-board", context, response.getWriter());
-        MDC.remove("gameId");
+        GameState currentState;
+        synchronized (lock) {
+            currentState = this.gameState;
+        }
+        MDC.put("gameId", currentState.getGameId());
+
+        try {
+            var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
+            var exchange = jakartaApplication.buildExchange(request, response);
+            var context = new WebContext(exchange);
+
+            context.setVariable("boardRows", renderer.getBoardView(currentState.getBoard()));
+            context.setVariable("turn", currentState.getTurn());
+            context.setVariable("error", request.getSession().getAttribute("error"));
+            request.getSession().removeAttribute("error"); // Чистим ошибку после показа
+
+            response.setContentType("text/html;charset=UTF-8");
+            templateEngine.process("chess-board", context, response.getWriter());
+        } finally {
+            MDC.remove("gameId");
+        }
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        MDC.put("gameId", gameId);
+
         String fromString = request.getParameter("from");
         String toString = request.getParameter("to");
-        HttpSession session = request.getSession();
-        GameState gameState1 = (GameState) session.getAttribute("gameState");
 
-        if (gameState1 != null) {
-            try {
-                Coordinates fromCoordinates = parseCoordinates(fromString);
-                Coordinates toCoordinates = parseCoordinates(toString);
-                MoveResult result = gameService.makeMove(gameState1, fromCoordinates, toCoordinates, gameState1.getGameId());
-                boolean success = game.makeMove(fromCoordinates, toCoordinates);
+        GameState currentState;
+        synchronized (lock) {
+            currentState = this.gameState;
+        }
+        MDC.put("gameId", currentState.getGameId());
 
-                if (!result.isSuccess()) {
-                    session.setAttribute("error", result.getMessage());
-                }
-            } catch (Exception e) {
-                request.getSession().setAttribute("error", "Incorrect format coordinates");
+        try {
+            Coordinates from = parseCoordinates(fromString);
+            Coordinates to = parseCoordinates(toString);
+            Move move = Move.normal(from, to);
+
+            MoveResult result = chessGameService.makeMove(currentState, move);
+
+            if (!result.isSuccess()) {
+                request.getSession().setAttribute("error", result.getMessage());
             }
-            response.sendRedirect(request.getContextPath() + "/game");
+        } catch (Exception e) {
+            log.warn("Failed to parse/apply move: from={}, to={}", fromString, toString, e);
+            request.getSession().setAttribute("error", "Incorrect format coordinates");
+        } finally {
             MDC.remove("gameId");
         }
+
+        response.sendRedirect(request.getContextPath() + "/game");
     }
 
     private Coordinates parseCoordinates(String inputStringCoordinates) {
