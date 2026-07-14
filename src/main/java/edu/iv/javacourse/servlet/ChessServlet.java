@@ -6,6 +6,7 @@ import edu.iv.javacourse.event.GameEventPublisher;
 import edu.iv.javacourse.event.listener.GameEventListener;
 import edu.iv.javacourse.event.listener.GameHistoryListener;
 import edu.iv.javacourse.game.ChessGameService;
+import edu.iv.javacourse.game.GameRegistry;
 import edu.iv.javacourse.game.GameState;
 import edu.iv.javacourse.move.Move;
 import edu.iv.javacourse.move.MoveResult;
@@ -16,7 +17,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.thymeleaf.TemplateEngine;
@@ -29,14 +29,12 @@ import java.io.IOException;
 @Slf4j
 @WebServlet(urlPatterns = "/game")
 public class ChessServlet extends HttpServlet {
-    private GameState gameState;
-    private String gameId = "";
-    private final Object lock = new Object();
 
     private ChessGameService chessGameService;
     private FenService fenService;
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
+    private GameRegistry gameRegistry;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -50,9 +48,10 @@ public class ChessServlet extends HttpServlet {
         this.fenService = new FenService(HashMapBoard::new);
         this.chessGameService = new ChessGameService(publisher);
         this.renderer = new BoardHtmlRenderer();
+        this.gameRegistry = new GameRegistry();
 
         // 3. Стартовая партия + событие onGameStarted
-        gameState = fenService.createDefaultGame();
+        GameState gameState = fenService.createDefaultGame();
         publisher.publishGameStarted();
 
         // 4. Thymeleaf
