@@ -1,37 +1,22 @@
 package edu.iv.javacourse.piece;
 
-import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-import edu.iv.javacourse.board.Board;
-import lombok.AllArgsConstructor;
+import edu.iv.javacourse.board.Color;
 import lombok.Getter;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Objects;
 
 @Getter
-@AllArgsConstructor
 abstract public class Piece {
-    public final Color color;
-    public Coordinates coordinates;
+    private final Color color;
 
-    public Set<Coordinates> getAvailableMoveSquares(Board board) {
-        Set<Coordinates> coordinatesSet = new HashSet<>();
-        for (CoordinatesShift shift : getPieceMoves()) {
-            if (coordinates.canShift(shift)) {
-                Coordinates newCoordinates = coordinates.shift(shift);
-                if (isSquareAvailableForMove(newCoordinates, board)) {
-                    coordinatesSet.add(newCoordinates);
-                }
-            }
-
-        }
-        return coordinatesSet;
+    protected Piece(Color color) {
+        this.color = Objects.requireNonNull(color, "Color can't be null");
     }
 
-    private boolean isSquareAvailableForMove(Coordinates coordinates, Board board) {
-        return board.isSquareEmpty(coordinates) || !board.getPiece(coordinates).getColor().equals(color);
-    }
+    public abstract PieceType getPieceType();
 
-    protected abstract Set<CoordinatesShift> getPieceMoves();
+    public String getCode() {
+        String code = getPieceType().getPieceTypeCode();
+        return color == Color.WHITE ? code.toUpperCase() : code.toLowerCase();
+    }
 }

@@ -1,18 +1,15 @@
 package edu.iv.javacourse.piece;
 
-import edu.iv.javacourse.Color;
-import edu.iv.javacourse.Coordinates;
-
-import java.util.Set;
+import edu.iv.javacourse.board.Color;
 
 public class Bishop extends Piece {
 
-    public Bishop(Color color, Coordinates coordinates) {
-        super(color, coordinates);
+    public Bishop(Color color) {
+        super(color);
     }
 
     @Override
-    protected Set<CoordinatesShift> getPieceMoves() {
-        return Set.of();
+    public PieceType getPieceType() {
+        return PieceType.BISHOP;
     }
 }
