@@ -9,7 +9,7 @@ import lombok.Getter;
 public class MoveResult {
     private final boolean success;
     private final Piece capturedPiece;
-        private final String message;
+    private final String message;
 
     public static MoveResult success(Piece capturedPiece) {
         return new MoveResult(true, capturedPiece, null);

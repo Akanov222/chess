@@ -1,6 +1,7 @@
 package edu.iv.javacourse.view;
 
 import edu.iv.javacourse.board.Board;
+import edu.iv.javacourse.board.Color;
 import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.board.File;
 import edu.iv.javacourse.piece.*;
@@ -34,9 +35,10 @@ public class BoardHtmlRenderer implements BoardRenderer<List<List<SquareView>>> 
                 Optional<Piece> optionalPiece = board.getPiece(coordinates);
                 Piece piece = optionalPiece.orElse(null);
                 String sprite = getUnicodeSprite(optionalPiece);
+                boolean dark = coordinates.getColorOfChessBoardSquare() == Color.BLACK;
                 row.add(new SquareView(
                         coordinates, piece,
-                        coordinates.getColorOfChessBoardSquare(),
+                        dark,
                         sprite));
             }
             rows.add(row);

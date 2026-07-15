@@ -11,6 +11,6 @@ import lombok.Getter;
 public class SquareView {
     private final Coordinates coordinates;
     private final Piece piece;
-    private final Color squareColor;
+    private final boolean dark;
     private final String unicodeSymbol;
 }

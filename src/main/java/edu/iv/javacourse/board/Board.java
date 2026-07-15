@@ -10,7 +10,6 @@ import java.util.Optional;
 public interface Board {
     Optional<Piece> getPiece(Coordinates coordinates);
     void setPiece(Coordinates coordinates, Piece piece);
-//    void movePiece(Coordinates coordinatesFrom, Coordinates coordinatesTo);
     void removePiece(Coordinates coordinates);
     List<Coordinates> findAllPieces(PieceType pieceType, Color colorToMove);
     Optional<Coordinates> findKing(Color colorToMove);

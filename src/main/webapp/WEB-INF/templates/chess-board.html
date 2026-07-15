@@ -9,10 +9,14 @@
         .chess-square {
             width: 60px; height: 60px;
             text-align: center; vertical-align: middle;
-            font-size: 40px; cursor: default;
+            font-size: 40px; cursor: pointer;
         }
+        .chess-square.selected { outline: 3px solid #27ae60; outline-offset: -3px; }
         .controls { background: #34495e; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .status { margin-bottom: 15px; font-size: 1.2em; font-weight: bold; text-align: center; }
+        .game-info { margin-bottom: 15px; font-size: 0.9em; color: #bdc3c7; text-align: center; }
+        .game-info code { background: #34495e; padding: 2px 6px; border-radius: 4px; color: #ecf0f1; }
+        .game-info a { color: #2ecc71; }
         .error { color: #e74c3c; background: #fadbd8; padding: 10px; border-radius: 4px; margin-bottom: 10px; font-size: 0.9em; }
         input[type="text"] { padding: 8px; width: 50px; border-radius: 4px; border: none; text-align: center; }
         button { padding: 8px 20px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
@@ -22,9 +26,18 @@
 <body>
     <h1>Chessmate Project</h1>
 
-    <!-- Статус хода -->
+    <!-- Идентификатор партии: ссылкой можно поделиться со вторым игроком -->
+    <div class="game-info">
+        Партия: <code th:text="${gameId}">00000000</code>
+        &nbsp;|&nbsp;
+        <a th:href="@{/game}">Новая партия</a>
+    </div>
+
+    <!-- Статус хода. turn приходит как "w" / "b" -->
     <div class="status">
-        Сейчас ходят: <span th:text="${turn}" th:style="'color: ' + (${turn.name() == 'WHITE'} ? '#f0d9b5' : '#8b4513')">WHITE</span>
+        Сейчас ходят:
+        <span th:text="${whiteToMove} ? 'БЕЛЫЕ' : 'ЧЁРНЫЕ'"
+              th:style="'color: ' + (${whiteToMove} ? '#f0d9b5' : '#8b4513')">WHITE</span>
     </div>
 
     <!-- Сообщение об ошибке (если есть) -->
@@ -36,7 +49,7 @@
                 th:id="${#strings.toLowerCase(square.coordinates.file)} + ${square.coordinates.rank}"
                 th:onclick="'handleSquareClick(this.id)'"
                 th:style="'background-color: ' + (${square.isDark} ? '#b58863' : '#f0d9b5')"
-                class="chess-square clickable">
+                class="chess-square">
 
                 <span th:text="${square.unicodeSymbol}"
                       th:style="'color: ' + (${square.piece != null && square.piece.color.name() == 'WHITE'} ? 'white' : 'black')">
@@ -48,6 +61,9 @@
     <!-- Форма управления игрой -->
     <div class="controls">
         <form id="moveForm" th:action="@{/game}" method="post">
+            <!-- Ход должен уходить в конкретную партию -->
+            <input type="hidden" name="gameId" th:value="${gameId}"/>
+
             <label>Откуда: </label>
             <input type="text" id="fromInput" name="from" placeholder="a2" maxlength="2" readonly required>
 
@@ -62,6 +78,7 @@
     <p style="margin-top: 20px; font-size: 0.8em; color: #bdc3c7;">
         Используйте формат a1-h8. Пример: b1 c3
     </p>
+
     <script>
         let fromSquare = null;
 
@@ -71,12 +88,12 @@
             const clickedElement = document.getElementById(coord);
 
             if (!fromSquare) {
-                // ПЕРВЫЙ КЛИК: Выбираем откуда ходим
+                // ПЕРВЫЙ КЛИК: выбираем, откуда ходим
                 fromSquare = coord;
                 fromInput.value = coord;
                 clickedElement.classList.add('selected');
             } else {
-                // ВТОРОЙ КЛИК: Куда ходим
+                // ВТОРОЙ КЛИК: куда ходим
                 if (fromSquare === coord) {
                     resetSelection();
                     return;

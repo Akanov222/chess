@@ -6,7 +6,6 @@ import edu.iv.javacourse.board.Coordinates;
 import edu.iv.javacourse.event.GameEventPublisher;
 import edu.iv.javacourse.event.MoveEvent;
 import edu.iv.javacourse.event.listener.GameEventListener;
-import edu.iv.javacourse.event.listener.GameHistoryListener;
 import edu.iv.javacourse.move.Move;
 import edu.iv.javacourse.move.MoveGeneratorFactory;
 import edu.iv.javacourse.move.MoveResult;

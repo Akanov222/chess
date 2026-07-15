@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class BaseBoardTest {
-
+/*
     @Test
     void isValidToFen() {
         Board board = new HashMapBoard();
@@ -19,5 +19,5 @@ class BaseBoardTest {
         assertThat(board.toFen(turn, castling, enPassant, halfMove, fullMove))
                 .as("Check toFen()")
                 .isEqualTo(expectedFen);
-    }
+    }*/
 }

@@ -3,7 +3,6 @@ package edu.iv.javacourse.servlet;
 import edu.iv.javacourse.board.*;
 import edu.iv.javacourse.board.fen.FenService;
 import edu.iv.javacourse.event.GameEventPublisher;
-import edu.iv.javacourse.event.listener.GameEventListener;
 import edu.iv.javacourse.event.listener.GameHistoryListener;
 import edu.iv.javacourse.game.ChessGameService;
 import edu.iv.javacourse.game.GameRegistry;
@@ -25,6 +24,7 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 import org.thymeleaf.templateresolver.WebApplicationTemplateResolver;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Slf4j
 @WebServlet(urlPatterns = "/game")
@@ -35,13 +35,14 @@ public class ChessServlet extends HttpServlet {
     private BoardHtmlRenderer renderer;
     private TemplateEngine templateEngine;
     private GameRegistry gameRegistry;
+    private GameEventPublisher publisher;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
         // 1. Событийная инфраструктура
-        GameEventPublisher publisher = new GameEventPublisher();
+        this.publisher = new GameEventPublisher();
         publisher.addListener(new GameHistoryListener());
 
         // 2. Сервисы
@@ -50,68 +51,80 @@ public class ChessServlet extends HttpServlet {
         this.renderer = new BoardHtmlRenderer();
         this.gameRegistry = new GameRegistry();
 
-        // 3. Стартовая партия + событие onGameStarted
-        GameState gameState = fenService.createDefaultGame();
-        publisher.publishGameStarted();
+        // 3. Thymeleaf
+        this.templateEngine = buildTemplateEngine();
 
-        // 4. Thymeleaf
-        var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
-        var resolver = new WebApplicationTemplateResolver(jakartaApplication);
-        resolver.setPrefix("/WEB-INF/templates/");
-        resolver.setSuffix(".html");
-        resolver.setTemplateMode("HTML");
-        resolver.setCharacterEncoding("UTF-8");
-        resolver.setCacheable(false);
-
-        this.templateEngine = new TemplateEngine();
-        this.templateEngine.setTemplateResolver(resolver);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        GameState currentState;
-        synchronized (lock) {
-            currentState = this.gameState;
+        String gameId = request.getParameter("gameId");
+        // Если нет gameId — создаём новую партию и редиректим на её URL.
+        // 3. Стартовая партия + событие onGameStarted
+        if (gameId == null || gameId.isBlank()) {
+            GameState gameState = fenService.createDefaultGame();
+            gameRegistry.registerGame(gameState);
+            MDC.put("gameId", gameState.getGameId());
+            publisher.publishGameStarted();
+            response.sendRedirect(request.getContextPath() + "/game?gameId=" + gameState.getGameId());
+            return;
         }
-        MDC.put("gameId", currentState.getGameId());
+
+        Optional<GameState> optionalGameState = gameRegistry.getGame(gameId);
+        if (optionalGameState.isEmpty()) {
+            log.debug("Game not found {}", gameId);
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Партия не найдена: " + gameId);
+            return;
+        }
+
+        GameState gameState = optionalGameState.get();
+        MDC.put("gameId", gameState.getGameId());
 
         try {
             var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
             var exchange = jakartaApplication.buildExchange(request, response);
             var context = new WebContext(exchange);
 
-            context.setVariable("boardRows", renderer.getBoardView(currentState.getBoard()));
-            context.setVariable("turn", currentState.getTurn());
+            context.setVariable("gameId", gameId);
+            context.setVariable("boardRows", renderer.getBoardView(gameState.getBoard()));
+            context.setVariable("whiteToMove", "w".equals(gameState.getTurn()));
             context.setVariable("error", request.getSession().getAttribute("error"));
-            request.getSession().removeAttribute("error"); // Чистим ошибку после показа
+            context.setVariable("error", request.getSession().getAttribute("error"));
 
             response.setContentType("text/html;charset=UTF-8");
             templateEngine.process("chess-board", context, response.getWriter());
         } finally {
             MDC.remove("gameId");
         }
-
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String gameId = request.getParameter("gameId");
         String fromString = request.getParameter("from");
         String toString = request.getParameter("to");
 
-        GameState currentState;
-        synchronized (lock) {
-            currentState = this.gameState;
+        Optional<GameState> optionalGameState = gameRegistry.getGame(gameId);
+        if (optionalGameState.isEmpty()) {
+            log.debug("Game not found {}", gameId);
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Партия не найдена: " + gameId);
+            return;
         }
-        MDC.put("gameId", currentState.getGameId());
+
+        GameState gameState = optionalGameState.get();
+        MDC.put("gameId", gameState.getGameId());
 
         try {
             Coordinates from = parseCoordinates(fromString);
             Coordinates to = parseCoordinates(toString);
             Move move = Move.normal(from, to);
 
-            MoveResult result = chessGameService.makeMove(currentState, move);
+            MoveResult result;
+            synchronized (gameState) {
+                result = chessGameService.makeMove(gameState, move);
+            }
 
             if (!result.isSuccess()) {
                 request.getSession().setAttribute("error", result.getMessage());
@@ -123,7 +136,7 @@ public class ChessServlet extends HttpServlet {
             MDC.remove("gameId");
         }
 
-        response.sendRedirect(request.getContextPath() + "/game");
+        response.sendRedirect(request.getContextPath() + "/game?gameId=" + gameId);
     }
 
     private Coordinates parseCoordinates(String inputStringCoordinates) {
@@ -131,5 +144,19 @@ public class ChessServlet extends HttpServlet {
         File file = File.valueOf(inputStringCoordinates.substring(0, 1).toUpperCase());
         int rank = Integer.parseInt(inputStringCoordinates.substring(1));
         return new Coordinates((file), rank);
+    }
+
+    private TemplateEngine buildTemplateEngine() {
+        var jakartaApplication = JakartaServletWebApplication.buildApplication(getServletContext());
+        var resolver = new WebApplicationTemplateResolver(jakartaApplication);
+        resolver.setPrefix("/WEB-INF/templates/");
+        resolver.setSuffix(".html");
+        resolver.setTemplateMode("HTML");
+        resolver.setCharacterEncoding("UTF-8");
+        resolver.setCacheable(false);
+
+        TemplateEngine engine = new TemplateEngine();
+        engine.setTemplateResolver(resolver);
+        return engine;
     }
 }
