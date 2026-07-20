@@ -1,5 +1,6 @@
 package edu.iv.javacourse.move;
 
+import edu.iv.javacourse.move.generator.KingMoveGenerator;
 import edu.iv.javacourse.move.generator.KnightMoveGenerator;
 import edu.iv.javacourse.move.generator.PieceMoveGenerator;
 import edu.iv.javacourse.piece.PieceType;
@@ -14,6 +15,7 @@ public class MoveGeneratorFactory {
 
     public MoveGeneratorFactory() {
         generators.put(PieceType.KNIGHT, new KnightMoveGenerator());
+        generators.put(PieceType.KING, new KingMoveGenerator());
     }
 
     public PieceMoveGenerator getGenerator(PieceType pieceType) {

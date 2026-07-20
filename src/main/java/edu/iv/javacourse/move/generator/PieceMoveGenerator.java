@@ -8,4 +8,5 @@ import java.util.Set;
 public interface PieceMoveGenerator {
     Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState gameState)
             throws InstantiationException, IllegalAccessException;
+
 }
