@@ -19,21 +19,3 @@ public class KnightMoveGenerator extends SingleStepMoveGenerator {
         );
     }
 }
-
-/*   @Override
-       public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState gameState) {
-           Board board = gameState.getBoard();
-           Piece knight = board.getPiece(coordinatesFrom).orElseThrow(
-                   () -> new IllegalStateException("On coordinates " + coordinatesFrom + " should be figure"));
-
-           Set<Coordinates> result = new HashSet<>();
-           for (CoordinatesShift shift : KNIGHTS_SHIFT()) {
-               coordinatesFrom.shift(shift).ifPresent(coordinatesTo -> {
-                   if (board.isSquareEmpty(coordinatesTo)
-                           || (board.getPiece(coordinatesTo).get().getColor() != knight.getColor())) {
-                       result.add(coordinatesTo);
-                   }
-               });
-           }
-           return result;
-       }*/

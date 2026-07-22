@@ -1,6 +1,7 @@
 package edu.iv.javacourse.game;
 
 import edu.iv.javacourse.board.Board;
+import edu.iv.javacourse.board.Coordinates;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,15 +9,20 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Getter
-@Setter
 @AllArgsConstructor
 public class GameState {
+    @Setter
     private final String gameId;
+    @Setter
     private Board board;
+    @Setter
     private String turn;
+    @Setter
     private String castling;
     private String enPassant;
+    @Setter
     int halfMove;
+    @Setter
     int fullMove;
 
     public GameState() {
@@ -36,5 +42,19 @@ public class GameState {
         copyGameState.setHalfMove(this.halfMove);
         copyGameState.setFullMove(this.fullMove);
         return copyGameState;
+    }
+
+    public void setEnPassant(Coordinates enPassant) {
+        this.enPassant = (enPassant == null) ? "-" : enPassant.toNotation();
+    }
+
+    public void setEnPassant(String enPassant) {
+        this.enPassant = enPassant;
+    }
+
+    public void clearEnPassant() {
+        if (!"-".equals(enPassant)) {
+            enPassant = "-";
+        }
     }
 }
