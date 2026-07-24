@@ -2,10 +2,13 @@ package edu.iv.javacourse.game;
 
 import edu.iv.javacourse.board.Board;
 import edu.iv.javacourse.board.Coordinates;
+import edu.iv.javacourse.board.File;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Arrays;
+import java.util.Optional;
 import java.util.UUID;
 
 @Getter
@@ -42,6 +45,37 @@ public class GameState {
         copyGameState.setHalfMove(this.halfMove);
         copyGameState.setFullMove(this.fullMove);
         return copyGameState;
+    }
+
+    public Optional<Coordinates> getEnPassantCoordinate() {
+        if (enPassant == null || enPassant.isBlank() || enPassant.equals("-")) {
+            return Optional.empty();
+        }
+
+        if (enPassant.length() != 2) {
+            return Optional.empty();
+        }
+
+        String filePartEnPassant = enPassant.substring(0, 1).toUpperCase();
+        Optional<File> matchedFile = Arrays.stream(File.CASHED_VALUES)
+                .filter(f -> f.getFileCode().equalsIgnoreCase(filePartEnPassant)).findFirst();
+
+        if (matchedFile.isEmpty()) {
+            return Optional.empty();
+        }
+
+        String rankPartEnPassant = enPassant.substring(1, 2).toUpperCase();
+        char rankChar = rankPartEnPassant.charAt(0);
+        int enPassantTargetRank = "w".equals(turn) ? 3 : 6;
+        if (Character.isDigit(rankChar)) {
+            int matchedRank = Character.getNumericValue(rankChar);
+            if (matchedRank == enPassantTargetRank) {
+                return Optional.of(new Coordinates(matchedFile.get(), matchedRank));
+            }
+        } else {
+            return Optional.empty();
+        }
+        return Optional.empty();
     }
 
     public void setEnPassant(Coordinates enPassant) {

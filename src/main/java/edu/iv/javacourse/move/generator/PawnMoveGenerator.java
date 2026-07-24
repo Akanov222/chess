@@ -16,8 +16,8 @@ public class PawnMoveGenerator implements PieceMoveGenerator {
     public Set<Coordinates> getAvailableMoveSquares(Coordinates coordinatesFrom, GameState gameState) throws InstantiationException, IllegalAccessException {
         Board board = gameState.getBoard();
         Set<Coordinates> result = new HashSet<>();
-//        Piece pawn = board.getPiece(coordinatesFrom).orElseThrow(
-//                () -> new IllegalStateException("On coordinates " + coordinatesFrom + " should be figure"));
+        Piece pawn = board.getPiece(coordinatesFrom).orElseThrow(
+                () -> new IllegalStateException("On coordinates " + coordinatesFrom + " should be figure"));
 
         // Ход простой, на одину или две клетки вперед
         int directionShift = "w".equals(gameState.getTurn()) ? 1 : -1;
@@ -33,17 +33,29 @@ public class PawnMoveGenerator implements PieceMoveGenerator {
                     coordinatesFrom.shift(forwardTwoShift).ifPresent(forwardTwoCoordinate -> {
                         if (board.isSquareEmpty(forwardTwoCoordinate)) {
                             result.add(forwardTwoCoordinate);
-                            gameState.setEnPassant(forwardOneCoordinate);
                         }
                     });
                 }
             }
         });
 
-        // Ход со взятием фигуры
-
-        // Ход со взятием фигуры на проходе
-
+        // Ход со взятием фигуры + на проходе
+        Set<CoordinatesShift> attackedShifts = Set.of(
+                new CoordinatesShift(1, directionShift),
+                new CoordinatesShift(-1, directionShift));
+        Optional<Coordinates> enPassantCoordinate = gameState.getEnPassantCoordinate();
+        for (CoordinatesShift shift : attackedShifts) {
+            coordinatesFrom.shift(shift).ifPresent(attackCoordinate -> {
+                if (!board.isSquareEmpty(attackCoordinate)) {
+                        Piece piece = board.getPiece(attackCoordinate).get();
+                        if (piece.getColor() != pawn.getColor()) {
+                            result.add(attackCoordinate);
+                    }
+                } else if (attackCoordinate.equals(enPassantCoordinate)) {
+                    result.add(attackCoordinate);
+                }
+            });
+        }
 
         return result;
     }

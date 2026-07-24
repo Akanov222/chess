@@ -58,6 +58,7 @@ public class ChessGameService {
                 return MoveResult.error("Фигура так ходить не может");
             }
 
+            //TODO: учесть что PawnMoveGenerator выдаётходы пешки прямо, но король этим ходом не атакуется
 /*            // 4. УРОВЕНЬ 2: не подставляем ли своего короля
             GameState simulatedGameState = gameState.copyForSimulation(gameState.getGameId());
             applyMoveOnBoard(simulatedGameState.getBoard(), move);

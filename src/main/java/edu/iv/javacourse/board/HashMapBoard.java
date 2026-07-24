@@ -1,6 +1,5 @@
 package edu.iv.javacourse.board;
 
-import edu.iv.javacourse.piece.King;
 import edu.iv.javacourse.piece.Piece;
 import edu.iv.javacourse.piece.PieceType;
 import lombok.extern.slf4j.Slf4j;
