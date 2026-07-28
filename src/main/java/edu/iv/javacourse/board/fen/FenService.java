@@ -71,6 +71,7 @@ public class FenService {
                 }
             }
         }
+
         log.debug("Board setup completed");
     }
 

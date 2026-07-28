@@ -12,6 +12,14 @@
             font-size: 40px; cursor: pointer;
         }
         .chess-square.selected { outline: 3px solid #27ae60; outline-offset: -3px; }
+        /* Ячейки с подписями координат */
+        .coord {
+            width: 24px; height: 24px;
+            text-align: center; vertical-align: middle;
+            font-size: 0.9em; font-weight: bold;
+            color: #ecf0f1; background-color: #34495e;
+            cursor: default;
+        }
         .controls { background: #34495e; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .status { margin-bottom: 15px; font-size: 1.2em; font-weight: bold; text-align: center; }
         .game-info { margin-bottom: 15px; font-size: 0.9em; color: #bdc3c7; text-align: center; }
@@ -44,7 +52,18 @@
     <div th:if="${error}" class="error" th:text="${error}"></div>
 
     <table class="chess-board">
+        <!-- Верхняя подпись файлов: a b c d e f g h -->
+        <tr>
+            <td class="coord"></td>
+            <td class="coord" th:each="square : ${boardRows[0]}"
+                th:text="${#strings.toLowerCase(square.coordinates.file)}">a</td>
+            <td class="coord"></td>
+        </tr>
+
+        <!-- Ряды доски. Слева и справа — номер ранга -->
         <tr th:each="row : ${boardRows}">
+            <td class="coord" th:text="${row[0].coordinates.rank}">8</td>
+
             <td th:each="square : ${row}"
                 th:id="${#strings.toLowerCase(square.coordinates.file)} + ${square.coordinates.rank}"
                 th:onclick="'handleSquareClick(this.id)'"
@@ -55,6 +74,16 @@
                       th:style="'color: ' + (${square.piece != null && square.piece.color.name() == 'WHITE'} ? 'white' : 'black')">
                 </span>
             </td>
+
+            <td class="coord" th:text="${row[0].coordinates.rank}">8</td>
+        </tr>
+
+        <!-- Нижняя подпись файлов -->
+        <tr>
+            <td class="coord"></td>
+            <td class="coord" th:each="square : ${boardRows[0]}"
+                th:text="${#strings.toLowerCase(square.coordinates.file)}">a</td>
+            <td class="coord"></td>
         </tr>
     </table>
 

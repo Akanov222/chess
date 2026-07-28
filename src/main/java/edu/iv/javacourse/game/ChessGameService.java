@@ -58,13 +58,14 @@ public class ChessGameService {
                 return MoveResult.error("Фигура так ходить не может");
             }
 
-            // 4. УРОВЕНЬ 2: не подставляем ли своего короля
+            //TODO: учесть что PawnMoveGenerator выдаётходы пешки прямо, но король этим ходом не атакуется
+/*            // 4. УРОВЕНЬ 2: не подставляем ли своего короля
             GameState simulatedGameState = gameState.copyForSimulation(gameState.getGameId());
             applyMoveOnBoard(simulatedGameState.getBoard(), move);
             if (isKingUnderAttack(simulatedGameState, colorToMove)) {
                 log.debug("Move rejected: own king would be under attack");
                 return MoveResult.error("Ход невозможен, король оказывается по шахом");
-            }
+            }*/
 
             // 5. Применяем настоящий ход
             Piece pieceCaptured = board.getPiece(move.getCoordinatesTo()).orElse(null);

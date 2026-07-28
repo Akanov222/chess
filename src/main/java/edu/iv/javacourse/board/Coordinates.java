@@ -1,6 +1,5 @@
 package edu.iv.javacourse.board;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -14,7 +13,6 @@ import java.util.Optional;
 public class Coordinates {
     private final File file;
     private final int rank;
-
 
     public Coordinates(File file, int rank) {
         this.file = Objects.requireNonNull(file, "File can't be null");
@@ -37,5 +35,9 @@ public class Coordinates {
         }
 
         return Optional.of(new Coordinates(File.getByIndex(newFileIndex), newRankIndex));
+    }
+
+    public String toNotation() {
+        return file.getFileCode() + rank;
     }
 }
