@@ -1,6 +1,7 @@
 package edu.iv.javacourse.board;
 
 import jdk.jfr.Description;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -10,13 +11,24 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CoordinatesTest {
-    /*@Test
-    void shiftShouldBeCorrectly() {
-        Coordinates start = new Coordinates(File.A, 1);
-        CoordinatesShift goodShift = new CoordinatesShift(1, 2);
-        Optional<Coordinates> result = start.shift(goodShift);
+    @Test
+    void shouldThrowExceptionWhenFileIsNull() {
+        File file = null;
+        int rank = 4;
 
-        assertThat(result).isPresent().hasValue(new Coordinates(File.B, 3));
+        NullPointerException exception = Assertions.assertThrows(
+                NullPointerException.class, () -> new Coordinates(file, rank));
+
+        Assertions.assertEquals("File can't be null", exception.getMessage());
+    }
+
+    @Test
+    void shiftShouldBeCorrectly() {
+        Coordinates startCoordinates = new Coordinates(File.A, 1);
+        CoordinatesShift goodShift = new CoordinatesShift(1, 2);
+        Optional<Coordinates> resultCoordinates = startCoordinates.shift(goodShift);
+
+        assertThat(resultCoordinates).isPresent().hasValue(new Coordinates(File.B, 3));
     }
 
     @Test
@@ -44,5 +56,5 @@ public class CoordinatesTest {
         assertThat(actualColor)
                 .as("Check Checking the domain color for a coordinate %s%d", file, rank)
                 .isEqualTo(expectedColor);
-    }*/
+    }
 }
