@@ -8,18 +8,26 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 public class CoordinatesTest {
     @Test
+    void shouldCreateCoordinatesSuccessfully() {
+        Coordinates coordinates = new Coordinates(File.A, 1);
+        assertThat(coordinates.getFile()).isEqualTo(File.A);
+        assertThat(coordinates.getRank()).isEqualTo(1);
+    }
+
+    @Test
     void shouldThrowExceptionWhenFileIsNull() {
-        File file = null;
-        int rank = 4;
+        assertThatNullPointerException().isThrownBy(() -> new Coordinates(null, 1))
+                .withMessage("File can't be null");
+    }
 
-        NullPointerException exception = Assertions.assertThrows(
-                NullPointerException.class, () -> new Coordinates(file, rank));
-
-        Assertions.assertEquals("File can't be null", exception.getMessage());
+    @Test
+    void shouldCoordinateExceptionWhenRankIsInvalid() {
+        assertThatIllegalArgumentException().isThrownBy(() -> new Coordinates(File.A, 9))
+                .withMessage("Rank can't be null"); // TODO: Изменить сообщение по вашей задаче CHESS-4
     }
 
     @Test
