@@ -24,10 +24,6 @@ public class Coordinates {
         this.rank = rank;
     }
 
-    public Color getColorOfChessBoardSquare() {
-        return (file.ordinal() + rank) % 2 == 0 ? Color.WHITE : Color.BLACK;
-    }
-
     public Optional<Coordinates> shift(CoordinatesShift shift) {
         Objects.requireNonNull(shift, "Shift can't be null");
         int newFileIndex = file.ordinal() + shift.getFileShift();
@@ -37,6 +33,10 @@ public class Coordinates {
         }
 
         return Optional.of(new Coordinates(File.getByIndex(newFileIndex), newRankIndex));
+    }
+
+    public Color getColorOfChessBoardSquare() {
+        return (file.ordinal() + rank) % 2 == 0 ? Color.WHITE : Color.BLACK;
     }
 
     public String toNotation() {
