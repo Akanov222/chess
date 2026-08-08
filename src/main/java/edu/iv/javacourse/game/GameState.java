@@ -56,7 +56,7 @@ public class GameState {
             return Optional.empty();
         }
 
-        String filePartEnPassant = enPassant.substring(0, 1).toUpperCase();
+        String filePartEnPassant = enPassant.substring(0, 1).toLowerCase();
         Optional<File> matchedFile = Arrays.stream(File.CASHED_VALUES)
                 .filter(f -> f.getFileCode().equalsIgnoreCase(filePartEnPassant)).findFirst();
 
@@ -64,7 +64,7 @@ public class GameState {
             return Optional.empty();
         }
 
-        String rankPartEnPassant = enPassant.substring(1, 2).toUpperCase();
+        String rankPartEnPassant = enPassant.substring(1, 2).toLowerCase();
         char rankChar = rankPartEnPassant.charAt(0);
         int enPassantTargetRank = "w".equals(turn) ? 3 : 6;
         if (Character.isDigit(rankChar)) {

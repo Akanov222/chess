@@ -17,13 +17,11 @@ public class Coordinates {
     public Coordinates(File file, int rank) {
         this.file = Objects.requireNonNull(file, "File can't be null");
         if (rank < 1 || rank > 8) {
+            // TODO [CHESS-4]: Исправить сообщение об ошибке. int не может быть null.
+            // Должно быть: "Rank must be between 1 and 8, but was " + rank
             throw new IllegalArgumentException("Rank can't be null");
         }
         this.rank = rank;
-    }
-
-    public Color getColorOfChessBoardSquare() {
-        return (file.ordinal() + rank) % 2 == 0 ? Color.WHITE : Color.BLACK;
     }
 
     public Optional<Coordinates> shift(CoordinatesShift shift) {
@@ -35,6 +33,10 @@ public class Coordinates {
         }
 
         return Optional.of(new Coordinates(File.getByIndex(newFileIndex), newRankIndex));
+    }
+
+    public Color getColorOfChessBoardSquare() {
+        return (file.ordinal() + rank) % 2 == 0 ? Color.WHITE : Color.BLACK;
     }
 
     public String toNotation() {
